@@ -20,14 +20,14 @@ RSpec.describe Work, type: :model do
   
   describe 'Work associations' do
       
-      it 'can be assigned to an Author' do 
-      
-          author = Author.new(name: 'Author')
-          book = Work.new(name: 'Book')
-          author.works << book
-          expect(author.works[0].name).to eq 'Book'
-          
-      end
+    it 'can be assigned to an Author' do 
+    
+      author = Author.new(name: 'Author')
+      book = Work.new(name: 'Book')
+      author.works << book
+      expect(author.works[0].name).to eq 'Book'
+        
+    end
   end
   
 end
