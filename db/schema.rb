@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160622151558) do
+ActiveRecord::Schema.define(version: 20160621181233) do
 
   create_table "authors", force: :cascade do |t|
     t.string   "name"
@@ -21,16 +21,7 @@ ActiveRecord::Schema.define(version: 20160622151558) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "quotes", force: :cascade do |t|
-    t.text     "text"
-    t.integer  "work_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  add_index "quotes", ["work_id"], name: "index_quotes_on_work_id"
-
-  create_table "works", force: :cascade do |t|
+  create_table "publications", force: :cascade do |t|
     t.string   "name"
     t.integer  "author_id"
     t.date     "publication_year"
@@ -38,6 +29,15 @@ ActiveRecord::Schema.define(version: 20160622151558) do
     t.datetime "updated_at",       null: false
   end
 
-  add_index "works", ["author_id"], name: "index_works_on_author_id"
+  add_index "publications", ["author_id"], name: "index_publications_on_author_id"
+
+  create_table "quotes", force: :cascade do |t|
+    t.text     "text"
+    t.integer  "publication_id"
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
+  end
+
+  add_index "quotes", ["publication_id"], name: "index_quotes_on_publication_id"
 
 end

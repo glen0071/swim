@@ -20,6 +20,7 @@ feature 'create page' do
   # scenario 'add quote' do
   #   visit new_quote_path
   #
+  #   fill_in('Text', with: "Here is the text of the first quote")
   # end
 
 end

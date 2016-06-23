@@ -1,0 +1,10 @@
+<h3>Add Publication</h3>
+
+<%= form_for :work, url: works_path do |f| %>
+  <%# render "shared/errors", object: :work %>
+  <%= f.label :name, class: "" %>
+  <%= f.text_field :name, class: "form-control" %>
+
+  <%= f.submit "Save Publication" %>
+
+<% end %>

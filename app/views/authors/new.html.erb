@@ -1,0 +1,14 @@
+<h3>Add Author</h3>
+
+<%= form_for :author, url: authors_path do |f| %>
+  <%# render "shared/errors", object: :author %>
+  <%= f.label :name, class: "" %>
+  <%= f.text_field :name, class: "form-control" %>
+  <%= f.label :birth, class: "" %>
+  <%= f.text_field :birth, class: "form-control" %>
+  <%= f.label :death, class: "" %>
+  <%= f.text_field :death, class: "form-control" %>
+
+  <%= f.submit "Save Author" %>
+
+<% end %>
