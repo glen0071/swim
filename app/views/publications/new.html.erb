@@ -1,6 +1,6 @@
 <h3>Add Publication</h3>
 
-<%= form_for :work, url: publications_path do |f| %>
+<%= form_for :publication, url: publications_path do |f| %>
   <%# render "shared/errors", object: :publication %>
   <%= f.label :name, class: "" %>
   <%= f.text_field :name, class: "form-control" %>
