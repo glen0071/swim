@@ -1,1 +1,7 @@
 <h1>Authors</h1>
+
+<% @authors.each do |author| %>
+
+  <%= link_to author.name, author_path(author), class: "btn btn-primary" %>
+
+<% end %>

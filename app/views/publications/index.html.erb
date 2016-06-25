@@ -1,1 +1,7 @@
 <h1>Publications</h1>
+
+<% @publications.each do |publication| %>
+
+  <%= link_to publication.name, publication_path(publication), class: "btn btn-primary" %>
+
+<% end %>

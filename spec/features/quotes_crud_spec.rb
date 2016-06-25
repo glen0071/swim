@@ -7,6 +7,11 @@ feature 'index page' do
     expect(page).to have_content('Quotes')
   end
 
+  scenario 'root routes to Quotes index' do
+    visit root_path
+    expect(page).to have_content('Quotes')
+  end
+
 end
 
 

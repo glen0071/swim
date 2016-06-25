@@ -1,1 +1,8 @@
 <h1>Quotes</h1>
+
+
+<% @quotes.each do |quote| %>
+
+  <%= link_to quote.name, quote_path(quote), class: "btn btn-primary" %>
+
+<% end %>

@@ -1,1 +1,12 @@
-<h1>Add Quote</h1>
+<h3>Add Quote</h3>
+
+<%= form_for :quote, url: quotes_path do |f| %>
+  <%# render "shared/errors", object: :quote %>
+  <%= f.label :text, class: "" %>
+  <%= f.text_area :text, class: "form-control" %>
+  <%= f.collection_select(:author_id, Author.all, :id, :name) %>
+  <%= f.collection_select(:publication_id, Publication.all, :id, :name) %>
+
+  <%= f.submit "Save Publication" %>
+
+<% end %>

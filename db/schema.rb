@@ -34,10 +34,12 @@ ActiveRecord::Schema.define(version: 20160621181233) do
   create_table "quotes", force: :cascade do |t|
     t.text     "text"
     t.integer  "publication_id"
+    t.integer  "author_id"
     t.datetime "created_at",     null: false
     t.datetime "updated_at",     null: false
   end
 
+  add_index "quotes", ["author_id"], name: "index_quotes_on_author_id"
   add_index "quotes", ["publication_id"], name: "index_quotes_on_publication_id"
 
 end

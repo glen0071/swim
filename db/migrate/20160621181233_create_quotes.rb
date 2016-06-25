@@ -3,6 +3,7 @@ class CreateQuotes < ActiveRecord::Migration
     create_table :quotes do |t|
       t.text :text
       t.references :publication, index: true, foreign_key: true
+      t.references :author, index: true, foreign_key: true
 
       t.timestamps null: false
     end
