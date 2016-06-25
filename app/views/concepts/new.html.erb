@@ -1,0 +1,12 @@
+<h3>Add Concept</h3>
+
+<%= form_for :concept, url: concepts_path do |f| %>
+  <%# render "shared/errors", object: :concept %>
+  <%= f.label :name, class: "" %>
+  <%= f.text_field :name, class: "form-control" %>
+  <%= f.label :summary, class: "" %>
+  <%= f.text_field :summary, class: "form-control" %>
+
+  <%= f.submit "Save Concept" %>
+
+<% end %>

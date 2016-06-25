@@ -1,0 +1,7 @@
+<h1>Concepts</h1>
+
+<% @concepts.each do |concept| %>
+  <ul class="ul_no_pad">
+    <li class="no-bullet"><%= link_to concept.name, concept_path(concept), class: "btn btn-primary" %></li>
+  </ul>
+<% end %>

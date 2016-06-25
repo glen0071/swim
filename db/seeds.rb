@@ -36,3 +36,5 @@ authors.each {|author| Author.create!(name: author)}
 HIDDEN_WORDS_STRING_ARRAY.each { |string|
   hidden_words.quotes << Quote.create(text: string, )
 }
+
+concepts = ["Truth", "Justice", "Purity", "Kindness", "Radiance", "Organic Growth"]
