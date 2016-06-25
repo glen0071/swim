@@ -2,6 +2,8 @@
 
 <% @publications.each do |publication| %>
 
-  <%= link_to publication.name, publication_path(publication), class: "btn btn-primary" %>
+  <ul class="ul_no_pad">
+    <li class="no-bullet"><%= link_to publication.name, publication_path(publication), class: "btn btn-primary" %></li>
+  </ul>
 
 <% end %>

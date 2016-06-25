@@ -17,6 +17,13 @@ ActiveRecord::Base.connection.tables.each do |table|
   ActiveRecord::Base.connection.execute("DELETE FROM #{table}")
 end
 
-authors = ["Bahá'u'lláh", 'The Báb' "'Abdu'l-Bahá", 'Shoghi Effendi', 'Universal House of Justice']
-books_one = ["Kitab-i-Aqdas"]
+authors = ['The Báb' "'Abdu'l-Bahá", 'Shoghi Effendi', 'Universal House of Justice']
+author_one = Author.create(name: "Bahá'u'lláh")
+
+books_one = ["Kitáb-i-Aqdas", "Epistle to the Son of the Wolf", "Gems of Divine Mysteris", "The Hidden Words", "The Kitáb-i-Íqán", "Prayers and Meditations by Bahá'u'lláh", "The Seven Valleys", "The Four Valleys", "The Summons of the Lord of Hosts", "The Tabernacle of Unity"]
+
+books_one.each { |book|
+  author_one.publications << Publication.new(name: book)
+}
+
 authors.each {|author| Author.create!(name: author)}

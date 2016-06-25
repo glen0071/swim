@@ -1,7 +1,10 @@
 <h1>Authors</h1>
 
 <% @authors.each do |author| %>
+  <ul class="ul_no_pad">
+    <li class="no-bullet"><%= link_to author.name, author_path(author), class: "btn btn-primary" %></li>
+  </ul>
 
-  <%= link_to author.name, author_path(author), class: "btn btn-primary" %>
+
 
 <% end %>
