@@ -11,12 +11,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160621181233) do
+ActiveRecord::Schema.define(version: 20160625211102) do
 
   create_table "authors", force: :cascade do |t|
     t.string   "name"
     t.date     "birth"
     t.date     "death"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "concepts", force: :cascade do |t|
+    t.string   "name"
+    t.string   "summary"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -41,5 +48,12 @@ ActiveRecord::Schema.define(version: 20160621181233) do
 
   add_index "quotes", ["author_id"], name: "index_quotes_on_author_id"
   add_index "quotes", ["publication_id"], name: "index_quotes_on_publication_id"
+
+  create_table "references", force: :cascade do |t|
+    t.integer  "quote_id"
+    t.integer  "concept_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
 end
