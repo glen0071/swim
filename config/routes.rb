@@ -7,5 +7,6 @@ Rails.application.routes.draw do
   resources :publications
   resources :concepts
   resources :writings
+  resources :examples
 
 end

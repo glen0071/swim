@@ -1,0 +1,14 @@
+<h1>Quote Page</h1>
+
+
+<h4><%= @quote.text %></h4>
+
+<%= link_to "Edit", edit_quote_path(@quote), class: "btn btn-primary" %>
+
+  <%= @quote_concepts.count %>
+
+<% @quote_concepts.each do |concept| %>
+
+  <%= concept.name %>
+
+<% end %>

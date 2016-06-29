@@ -8,8 +8,14 @@ class QuotesController < ApplicationController
     @quote = Quote.new
   end
 
+  def show
+    @quote = Quote.find(params[:id])
+    @quote_concepts = @quote.concepts
+  end
+
   def edit
-    @quote = Quote.new
+    @concepts = Concept.all
+    @quote = Quote.find(params[:id])
   end
 
   def create

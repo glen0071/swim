@@ -125,7 +125,7 @@
 <part>id</part>
 </key>
 </table>
-<table x="932" y="76" name="references">
+<table x="932" y="76" name="examples">
 <row name="id" null="1" autoincrement="1">
 <datatype>INTEGER</datatype>
 <default>NULL</default></row>
