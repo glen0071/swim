@@ -13,7 +13,17 @@ class ConceptsController < ApplicationController
   end
 
   def create
-    @concept = Concept.new
+    @concept = Concept.new(concept_params)
+
+    if @concept.save
+      redirect_to @concept
+    else
+      render 'new'
+    end
+  end
+
+  def show
+    @concept = Concept.find(params[:id])
   end
 
   private

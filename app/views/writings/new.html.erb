@@ -1,0 +1,12 @@
+<h3>Add Writing</h3>
+
+<%= form_for :writing, url: writings_path do |f| %>
+  <%# render "shared/errors", object: :work %>
+  <%= f.label :title, class: "" %>
+  <%= f.text_field :title, class: "form-control" %>
+  <%= f.label :alt_title, class: "" %>
+  <%= f.text_field :alt_title, class: "form-control" %>
+
+  <%= f.submit "Save Writing" %>
+
+<% end %>
