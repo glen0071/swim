@@ -3,12 +3,10 @@
 
 <h4><%= @quote.text %></h4>
 
-<%= link_to "Edit", edit_quote_path(@quote), class: "btn btn-primary" %>
-
-  <%= @quote_concepts.count %>
+<%= link_to "Edit", edit_quote_path(@quote), class: "btn btn-danger" %>
 
 <% @quote_concepts.each do |concept| %>
 
-  <%= concept.name %>
+  <span class="btn btn-primary"><%= concept.name %></span>
 
 <% end %>

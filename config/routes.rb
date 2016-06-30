@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  root 'quotes#index'
+  root 'concepts#index'
 
   resources :quotes
   resources :authors
