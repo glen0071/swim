@@ -1,3 +1,9 @@
 <h1>Concept Page</h1>
 
 <h4><%= @concept.name %></h4>
+
+<% @quotes.each do |quote| %>
+
+  <%= quote.text %>
+
+<% end %>

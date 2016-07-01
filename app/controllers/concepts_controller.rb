@@ -24,6 +24,8 @@ class ConceptsController < ApplicationController
 
   def show
     @concept = Concept.find(params[:id])
+
+    @quotes = @concept.quotes
   end
 
   private
