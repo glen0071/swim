@@ -1,5 +1,4 @@
 class ConceptsController < ApplicationController
-
   def index
     @concepts = Concept.all
   end
@@ -29,8 +28,8 @@ class ConceptsController < ApplicationController
   end
 
   private
-    def concept_params
-      params.require(:concept).permit(:name, :summary)
-    end
 
+  def concept_params
+    params.require(:concept).permit(:name, :summary)
+  end
 end

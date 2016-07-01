@@ -1,5 +1,4 @@
 class QuotesController < ApplicationController
-
   def index
     @quotes = Quote.all
   end
@@ -23,8 +22,8 @@ class QuotesController < ApplicationController
   end
 
   private
-    def quote_params
-      params.require(:quote).permit(:text, :author_id, :publication_id)
-    end
 
+  def quote_params
+    params.require(:quote).permit(:text, :author_id, :publication_id)
+  end
 end

@@ -1,7 +1,6 @@
 require 'rails_helper'
 
 feature 'Author cruds page' do
-
   scenario 'Author index headline' do
     visit authors_path
     expect(page).to have_content('Authors')
@@ -16,5 +15,4 @@ feature 'Author cruds page' do
 
     expect(page).to have_content('Author Name')
   end
-
 end

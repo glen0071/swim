@@ -1,5 +1,4 @@
 class WritingsController < ApplicationController
-
   def index
     @writings = Writing.all
   end
@@ -17,8 +16,8 @@ class WritingsController < ApplicationController
   end
 
   private
-    def quote_params
-      params.require(:writing).permit(:title, :alt_title)
-    end
 
+  def quote_params
+    params.require(:writing).permit(:title, :alt_title)
+  end
 end

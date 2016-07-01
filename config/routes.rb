@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-
   root 'concepts#index'
 
   resources :quotes
@@ -8,5 +7,4 @@ Rails.application.routes.draw do
   resources :concepts
   resources :writings
   resources :examples
-
 end

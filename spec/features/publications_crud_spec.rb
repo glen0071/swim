@@ -1,7 +1,6 @@
 require 'rails_helper'
 
 feature 'Publication cruds' do
-
   scenario 'Publication index headline' do
     visit publications_path
     expect(page).to have_content('Publications')
@@ -14,5 +13,4 @@ feature 'Publication cruds' do
 
     expect(page).to have_content('Publication Name')
   end
-
 end

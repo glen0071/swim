@@ -1,7 +1,6 @@
 require 'rails_helper'
 
 feature 'index page' do
-
   scenario 'Quotes headline' do
     visit quotes_path
     expect(page).to have_content('Quotes')
@@ -11,12 +10,9 @@ feature 'index page' do
     visit root_path
     expect(page).to have_content('Quotes')
   end
-
 end
 
-
 feature 'create page' do
-
   scenario 'Add Quotess headline' do
     visit new_quote_path
     expect(page).to have_content('Add Quote')
@@ -27,5 +23,4 @@ feature 'create page' do
   #
   #   fill_in('Text', with: "Here is the text of the first quote")
   # end
-
 end

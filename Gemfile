@@ -1,7 +1,5 @@
 source 'https://rubygems.org'
 
-
-
 gem 'rails', '4.2.5'
 
 gem 'sqlite3'
@@ -15,7 +13,6 @@ gem 'bootstrap-sass'
 
 gem 'sdoc', '~> 0.4.0', group: :doc
 
-
 group :development, :test do
   gem 'rspec-rails'
   gem 'pry-byebug'
@@ -23,7 +20,8 @@ end
 
 group :test do
   gem 'capybara'
-  gem 'simplecov', :require => false
+  gem 'simplecov', require: false
+  gem 'rubocop', require: false
 end
 
 group :development do

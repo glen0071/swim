@@ -1,5 +1,4 @@
 class AuthorsController < ApplicationController
-
   def index
     @authors = Author.all
   end
@@ -23,8 +22,7 @@ class AuthorsController < ApplicationController
 
   private
 
-    def author_params
-      params.require(:author).permit(:name, :brith, :death)
-    end
-
+  def author_params
+    params.require(:author).permit(:name, :brith, :death)
+  end
 end
