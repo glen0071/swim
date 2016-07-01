@@ -18,7 +18,7 @@ RSpec.describe Author, type: :model do
   describe 'work association' do
     context 'author with no works' do
       it '#works returns empty array' do
-        expect(named_author.works).to eq []
+        expect(named_author.publications).to eq []
       end
     end
 
@@ -31,5 +31,8 @@ RSpec.describe Author, type: :model do
   describe 'quote association' do
     it 'must have an array of quotes through works' do
     end
+
   end
+
+
 end
