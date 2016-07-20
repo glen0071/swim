@@ -1,16 +1,6 @@
 require_relative 'hidden_words'
 require_relative 'tablets_one'
-
-ActiveRecord::Base.establish_connection
-ActiveRecord::Base.connection.tables.each do |table|
-  next if table == 'schema_migrations'
-
-  # MySQL and PostgreSQL
-  # ActiveRecord::Base.connection.execute("TRUNCATE #{table}")
-
-  # SQLite
-  ActiveRecord::Base.connection.execute("DELETE FROM #{table}")
-end
+require_relative 'concepts'
 
 authors = ['The Báb' "'Abdu'l-Bahá", 'Shoghi Effendi', 'Universal House of Justice']
 author_one = Author.create(name: "Bahá'u'lláh")
@@ -34,8 +24,6 @@ TABLETS_ARRAY.each do |writing_hash|
   Writing.create(title: writing_hash[:title], alt_title: writing_hash[:title])
 end
 
-concepts = ['Truth', 'Justice', 'Purity', 'Kindness', 'Radiance', 'Organic Growth']
-
-concepts.each do |concept|
+CONCEPTS.each do |concept|
   Concept.create(name: concept)
 end
