@@ -1,4 +1,4 @@
-class ExamplesController < ApplicationController
+class ReferencesController < ApplicationController
   def create
     params
     quote = Quote.find(params['quote_id'])

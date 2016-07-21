@@ -4,5 +4,5 @@
 <h4><%= @quote.text %></h4>
 
 <% @concepts.each do |concept| %>
-  <%= button_to concept.name, examples_path, params: {concept_id: concept.id, quote_id: @quote.id }, class: "btn btn-primary" %>
+  <%= button_to concept.name, references_path, params: {concept_id: concept.id, quote_id: @quote.id }, class: "btn btn-primary" %>
 <% end %>

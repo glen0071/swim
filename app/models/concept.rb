@@ -1,4 +1,4 @@
 class Concept < ActiveRecord::Base
-  has_many :examples
-  has_many :quotes, through: :examples
+  has_many :references
+  has_many :quotes, through: :references
 end

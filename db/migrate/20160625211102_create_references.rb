@@ -1,6 +1,6 @@
-class CreateExamples < ActiveRecord::Migration
+class CreateReferences < ActiveRecord::Migration
   def change
-    create_table :examples do |t|
+    create_table :references do |t|
       t.references :quote
       t.references :concept
 
