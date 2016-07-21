@@ -1,6 +1,6 @@
 language: ruby
-rbenv:
-  - 1.0.0
+rvm:
+  - 2.2
 env:
   - DB=postgresql
 script:
@@ -9,7 +9,6 @@ before_script:
   - bundle exec rake db:create RAILS_ENV=test
   - bundle exec rake db:migrate
   - bundle exec rake db:test:prepare
-bundler_args: --binstubs=./bundler_stubs
 deploy:
   provider: heroku
   app: swim-beta
