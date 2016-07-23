@@ -31,8 +31,5 @@ RSpec.describe Author, type: :model do
   describe 'quote association' do
     it 'must have an array of quotes through writings' do
     end
-
   end
-
-
 end

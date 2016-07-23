@@ -11,61 +11,60 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160628042021) do
-
+ActiveRecord::Schema.define(version: 20_160_628_042_021) do
   # These are extensions that must be enabled in order to support this database
-  enable_extension "plpgsql"
+  enable_extension 'plpgsql'
 
-  create_table "authors", force: :cascade do |t|
-    t.string   "name"
-    t.date     "birth"
-    t.date     "death"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+  create_table 'authors', force: :cascade do |t|
+    t.string   'name'
+    t.date     'birth'
+    t.date     'death'
+    t.datetime 'created_at', null: false
+    t.datetime 'updated_at', null: false
   end
 
-  create_table "concepts", force: :cascade do |t|
-    t.string   "name"
-    t.string   "summary"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+  create_table 'concepts', force: :cascade do |t|
+    t.string   'name'
+    t.string   'summary'
+    t.datetime 'created_at', null: false
+    t.datetime 'updated_at', null: false
   end
 
-  create_table "publications", force: :cascade do |t|
-    t.string   "name"
-    t.integer  "author_id"
-    t.date     "publication_year"
-    t.datetime "created_at",       null: false
-    t.datetime "updated_at",       null: false
+  create_table 'publications', force: :cascade do |t|
+    t.string   'name'
+    t.integer  'author_id'
+    t.date     'publication_year'
+    t.datetime 'created_at',       null: false
+    t.datetime 'updated_at',       null: false
   end
 
-  add_index "publications", ["author_id"], name: "index_publications_on_author_id", using: :btree
+  add_index 'publications', ['author_id'], name: 'index_publications_on_author_id', using: :btree
 
-  create_table "quotes", force: :cascade do |t|
-    t.text     "text"
-    t.integer  "publication_id"
-    t.integer  "author_id"
-    t.datetime "created_at",     null: false
-    t.datetime "updated_at",     null: false
+  create_table 'quotes', force: :cascade do |t|
+    t.text     'text'
+    t.integer  'publication_id'
+    t.integer  'author_id'
+    t.datetime 'created_at',     null: false
+    t.datetime 'updated_at',     null: false
   end
 
-  add_index "quotes", ["author_id"], name: "index_quotes_on_author_id", using: :btree
-  add_index "quotes", ["publication_id"], name: "index_quotes_on_publication_id", using: :btree
+  add_index 'quotes', ['author_id'], name: 'index_quotes_on_author_id', using: :btree
+  add_index 'quotes', ['publication_id'], name: 'index_quotes_on_publication_id', using: :btree
 
-  create_table "references", force: :cascade do |t|
-    t.integer  "quote_id"
-    t.integer  "concept_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+  create_table 'references', force: :cascade do |t|
+    t.integer  'quote_id'
+    t.integer  'concept_id'
+    t.datetime 'created_at', null: false
+    t.datetime 'updated_at', null: false
   end
 
-  create_table "writings", force: :cascade do |t|
-    t.string  "title"
-    t.string  "alt_title"
-    t.integer "publications_id"
+  create_table 'writings', force: :cascade do |t|
+    t.string  'title'
+    t.string  'alt_title'
+    t.integer 'publications_id'
   end
 
-  add_foreign_key "publications", "authors"
-  add_foreign_key "quotes", "authors"
-  add_foreign_key "quotes", "publications"
+  add_foreign_key 'publications', 'authors'
+  add_foreign_key 'quotes', 'authors'
+  add_foreign_key 'quotes', 'publications'
 end

@@ -28,4 +28,4 @@ CONCEPTS = [
   'Gentleness',
   'Praiseworthy',
   'Creativity'
-]
+].freeze

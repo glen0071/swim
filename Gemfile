@@ -23,7 +23,6 @@ group :test do
   gem 'simplecov', require: false
   gem 'rubocop', require: false
   gem 'reek'
-
 end
 
 group :development do

@@ -1,7 +1,6 @@
 require 'rails_helper'
 
 RSpec.describe ConceptsController, type: :controller do
-
   describe 'GET index' do
     it 'renders index template' do
       get :index
@@ -20,5 +19,4 @@ RSpec.describe ConceptsController, type: :controller do
       expect(assigns(:concept)).to be_a_new(Concept)
     end
   end
-
 end
