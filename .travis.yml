@@ -16,4 +16,3 @@ deploy:
     - "bundle"
     - "rake db:migrate"
   strategy: git
-  api_key: ENV['TRAVIS_TOKEN']
