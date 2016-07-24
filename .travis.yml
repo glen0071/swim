@@ -1,18 +1,20 @@
 language: ruby
 rvm:
-  - 2.2
+- 2.2
 env:
-  - DB=postgresql
+- DB=postgresql
 script:
-  - bundle exec rake spec
+- bundle exec rake spec
 before_script:
-  - bundle exec rake db:create RAILS_ENV=test
-  - bundle exec rake db:migrate
-  - bundle exec rake db:test:prepare
+- bundle exec rake db:create RAILS_ENV=test
+- bundle exec rake db:migrate
+- bundle exec rake db:test:prepare
 deploy:
   provider: heroku
   app: swim-beta
   run:
-    - "bundle"
-    - "rake db:migrate"
+  - bundle
+  - rake db:migrate
   strategy: git
+  api_key:
+    secure: StCrbxnnkUsbdL/1nBPTrLQMKmT7w+FjBZFhB78dinLKOoOEO2GrqQZINNCpQ1ezuf/wbTsevwtm2Wr8dCRH/YB0g24nENbcWe2K/P9wHMr6IhtmRSprMXJggsBtXMfM24EPKqkCM0D7C8yToMWmqPJII2ewMP1KXEZg53Le+X/5Mzun/qnIUkXNguno/xtRsd1JY1zvzx4zH36ls/24FXucY2yOn/m5Ygg+7PrtRNrAAHy/NtQznKui5iRdKSveIyq5F6tAfhBEIDdhtgs9N45dgv6q/bctWNDM2ewzuG6pPA2KG853gTugihs7WSIXpIIEaVogKl/iqnBSUxZ9F0Tl42hdJFzMIpKvkoiBV6w7JYDUNKtJwtCaE5aoQY/oGoez6anwhb9nvMOPp9Y1JM/lTmos45Beb5ruDGbXseIQrB/OwNHlAIXfNdRy1XM0H66q6Dsa/zOLZoFk6pW27VjzL3DiQTaCDnsAfGimN3h+ymHwMC1QaYTv/0mht0IhMmsrShyLTldJ5CfG5Pi4RcJQeTnoQrYDDooQ3S+w6yZU96pB1j+i4DRZpHy1Ok1bmvYhbH/n63smAIImjArULgu69HL8RvoLkgTwmBCMOps19g21GT88WtL5vvN7dXBLa3tRlwzzgwFjDuar25WbjQxBZvhTOORoNpoZKiNUEsw=
