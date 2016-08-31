@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
-  root 'concepts#index'
+
+  get 'home/index'
 
   resources :quotes
   resources :authors
@@ -7,4 +8,9 @@ Rails.application.routes.draw do
   resources :concepts
   resources :writings
   resources :references
+
+  get '/home', to: 'home#index'
+
+  root 'home#index'
+
 end
