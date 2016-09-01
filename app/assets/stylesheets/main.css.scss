@@ -7,4 +7,7 @@
 .column-center { width: 300px; margin: 0px auto; }
 .center-button { display: block; margin: 0px auto; max-width: 200px;  }
 
-.footer-nav {  }
+.footer-nav {
+  width: 100%;
+  position:absolute;
+  bottom:0px; }
