@@ -1,11 +1,24 @@
 @import 'bootstrap-sprockets';
 @import 'bootstrap';
 
-
 .ul_no_pad { padding-left: 0px;}
 .no-bullet {list-style-type: none; padding-left: 0px;}
 .column-center { width: 300px; margin: 0px auto; }
-.center-button { display: block; margin: 0px auto; max-width: 200px;  }
+
+@media (min-width: 600px) {
+  .btn-container {
+    max-width: 80%;
+    margin: 0 auto;
+  }
+}
+
+.hide-btn {
+  display: none;
+}
+
+.concept-btn {
+  margin: 5px;
+}
 
 .footer-nav {
   width: 100%;

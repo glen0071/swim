@@ -1,7 +1,15 @@
 <h1 align="center">Concepts</h1>
 
-<% @concepts.each do |concept| %>
-  <ul class="ul_no_pad">
-    <li class="no-bullet"><%= link_to concept.name, concept_path(concept), class: "btn btn-primary center-button" %></li>
-  </ul>
-<% end %>
+<div class="concepts-search">
+  <input type="text" id="concepts-search" placeholder="What would you like to explore" class="form-control" autofocus>
+  <div class="results" id="concepts-search-results"></div>
+</div>
+
+<div id="btn-container" class="btn-container">
+  <% @concepts.each do |concept| %>
+    <%= link_to concept.name, concept_path(concept),
+      class: "concept-btn btn btn-success col-sm-2",
+      id: "#{concept.name}"
+    %>
+  <% end %>
+</div>

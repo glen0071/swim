@@ -1,6 +1,9 @@
 class ConceptsController < ApplicationController
   def index
     @concepts = Concept.all
+    @name_array = Concept.all.map { |c|
+      c.name
+    }
   end
 
   def new
