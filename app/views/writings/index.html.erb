@@ -3,7 +3,7 @@
 <% @writings.each do |writing| %>
 
   <ul class="ul_no_pad">
-    <li class="no-bullet"><%= link_to writing.title, publication_path(writing), class: "btn btn-primary" %></li>
+    <li class="no-bullet"><%= link_to writing.title, writing_path(writing), class: "btn btn-primary" %></li>
   </ul>
 
 <% end %>

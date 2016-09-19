@@ -1,31 +1,8 @@
 CONCEPTS = [
-  'Truth',
-  'Justice',
-  'Purity',
-  'Kindness',
-  'Radiance',
-  'Organic Growth',
-  'Life after Death',
-  'Love',
-  'Devotion',
-  'Sovereignty',
-  'Unity',
-  'Respect',
-  'Cleanliness',
-  'Forgiveness',
-  'Humility',
-  'Truthfulness',
-  'Trustworthiness',
-  'Reverence',
-  'Service',
-  'Patience',
-  'Self-Discipline',
-  'Joy',
-  'Faith',
-  'Gratefulness',
-  'Detachment',
-  'Detachment',
-  'Gentleness',
-  'Praiseworthy',
-  'Creativity'
-].freeze
+  "truth", "justice", "purity", "kindness", "radiance", "organic
+growth", "life after death", "love", "devotion", "sovereignty", "unity",
+"respect", "cleanliness", "forgiveness", "humility", "truthfulness",
+"trustworthiness", "reverence", "service", "patience",  "self-discipline",
+"joy", "faith", "gratefulness", "detachment", "detachment", "gentleness",
+"praiseworthy", "creativity"
+  ].freeze

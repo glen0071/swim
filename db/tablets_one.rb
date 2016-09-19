@@ -62,6 +62,33 @@ TABLETS_ARRAY = [
   {
     title: 'Lawḥ-i-Arḍ-i-Bá',
     alt_name: 'Tablet of the Land of Bá'
-  }
-
+  },
+  # {
+  #   title: 'Kitáb-i-Aqdas',
+  #   alt_name: 'Kitáb-i-Aqdas'
+  # },
+  {
+    title: 'unknown',
+    alt_name: 'Epistle to the Son of the Wolf'
+  },
+  {
+    title: 'unknown',
+    alt_name: 'Gems of Divine Mysteris'
+  },
+  {
+    title: 'unknown',
+    alt_name: 'The Four Valleys'
+  },
+  # {
+  #   title: 'The Kitáb-i-Íqán',
+  #   alt_name: 'The Kitáb-i-Íqán'
+  # },
+  {
+    title: 'unkonwn',
+    alt_name: 'The Seven Valleys'
+  },
+  # {
+  #   title: 'unknown',
+  #   alt_name: 'The Hidden Words'
+  # }
 ].freeze
