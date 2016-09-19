@@ -5,7 +5,7 @@
   <%= f.label :text, class: "" %>
   <%= f.text_area :text, class: "form-control" %>
   <%= f.collection_select(:author_id, Author.all, :id, :name) %>
-  <%= f.collection_select(:writing_id, Writing.all, :id, :name) %>
+  <%= f.collection_select(:writing_id, Writing.all, :id, :title) %>
 
   <%= f.submit "Save Publication" %>
 
