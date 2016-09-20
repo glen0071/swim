@@ -7,10 +7,15 @@
       author_path(author),
       class: "btn btn-primary" %>
       <br>
+      <span class="ministry">Life
+        <%= author.start.strftime("%Y") %> - <%= author.end.strftime("%Y") %>
+      </span>
+      <br>
       <span class="ministry">Ministry
         <%= author.start.strftime("%Y") %> - <%= author.end.strftime("%Y") %>
       </span>
     </li>
+    <br>
   </ul>
 
 

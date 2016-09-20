@@ -13,7 +13,7 @@ class QuotesController < ApplicationController
   end
 
   def edit
-    @concepts = Concept.all
+    @concepts = Concept.all.sort {|a,b| a.name <=> b.name}
     @quote = Quote.find(params[:id])
   end
 

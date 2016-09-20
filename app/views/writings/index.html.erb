@@ -3,7 +3,18 @@
 <% @writings.each do |writing| %>
 
   <ul class="ul_no_pad">
-    <li class="no-bullet"><%= link_to writing.title, writing_path(writing), class: "btn btn-primary" %></li>
+    <li class="no-bullet">
+      <%= link_to writing.title, writing_path(writing), class: "btn btn-primary" %>
+      <span>(<%= writing.alt_title %>)</span>
+      <br>
+      <span>
+        <% writing.concepts.each do |concept| %>
+          <%= concept.name %>
+        <% end %>
+      </span>
+    </li>
+
+
   </ul>
 
 <% end %>

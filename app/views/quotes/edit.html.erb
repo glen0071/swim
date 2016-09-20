@@ -2,7 +2,8 @@
 
 
 <h4><%= @quote.text %></h4>
-
+<br>
+<em>Click on a conept below to associate it with this quotation.</em>
 <% @concepts.each do |concept| %>
-  <%= button_to concept.name, references_path, params: {concept_id: concept.id, quote_id: @quote.id }, class: "btn btn-primary" %>
+  <%= button_to concept.name, references_path, params: {concept_id: concept.id, quote_id: @quote.id }, class: "concept-btn btn btn-primary col-sm-2" %>
 <% end %>

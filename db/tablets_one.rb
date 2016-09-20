@@ -1,94 +1,94 @@
 TABLETS_ARRAY = [
   {
     title: 'Lawḥ-i-Karmil',
-    alt_name: 'Tablet of Carmel'
+    alt_title: 'Tablet of Carmel'
   },
   {
     title: 'Lawḥ-i-Aqdas',
-    alt_name: 'The Most Holy Tablet'
+    alt_title: 'The Most Holy Tablet'
   },
   {
     title: 'Bishárát',
-    alt_name: 'Glad-Tidings'
+    alt_title: 'Glad-Tidings'
   },
   {
     title: 'Ṭarázát',
-    alt_name: 'Ornaments'
+    alt_title: 'Ornaments'
   },
   {
     title: 'Tajallíyát',
-    alt_name: 'Effulgences'
+    alt_title: 'Effulgences'
   },
   {
     title: 'Kalimát-i-Firdawsíyyih',
-    alt_name: 'Words of Paradise'
+    alt_title: 'Words of Paradise'
   },
   {
     title: 'Lawḥ-i-Dunyá',
-    alt_name: 'Tablet of the World'
+    alt_title: 'Tablet of the World'
   },
   {
     title: 'Ishráqát',
-    alt_name: 'Splendours'
+    alt_title: 'Splendours'
   },
   {
     title: 'Lawḥ-i-Ḥikmat',
-    alt_name: 'Tablet of Wisdom'
+    alt_title: 'Tablet of Wisdom'
   },
   {
     title: "Aṣl-i-Kullu'l-Khayr",
-    alt_name: 'Words of Wisdom'
+    alt_title: 'Words of Wisdom'
   },
   {
     title: 'Lawḥ-i-Maqṣúd',
-    alt_name: 'Tablet of Maqṣúd'
+    alt_title: 'Tablet of Maqṣúd'
   },
   {
     title: 'Súriy-i-Vafá',
-    alt_name: 'Tablet of Vafá'
+    alt_title: 'Tablet of Vafá'
   },
   {
     title: 'Lawḥ-i-Siyyid-i-Mihdíy-i-Dahají',
-    alt_name: 'Tablet to Siyyid Mihdíy-i-Dahají'
+    alt_title: 'Tablet to Siyyid Mihdíy-i-Dahají'
   },
   {
     title: 'Lawḥ-i-Burhán',
-    alt_name: 'Tablet of the Proof'
+    alt_title: 'Tablet of the Proof'
   },
   {
     title: 'Kitáb-i-`Ahd',
-    alt_name: 'Book of the Covenant'
+    alt_title: 'Book of the Covenant'
   },
   {
     title: 'Lawḥ-i-Arḍ-i-Bá',
-    alt_name: 'Tablet of the Land of Bá'
+    alt_title: 'Tablet of the Land of Bá'
   },
   # {
   #   title: 'Kitáb-i-Aqdas',
-  #   alt_name: 'Kitáb-i-Aqdas'
+  #   alt_title: 'Kitáb-i-Aqdas'
   # },
   {
     title: 'unknown',
-    alt_name: 'Epistle to the Son of the Wolf'
+    alt_title: 'Epistle to the Son of the Wolf'
   },
   {
     title: 'unknown',
-    alt_name: 'Gems of Divine Mysteris'
+    alt_title: 'Gems of Divine Mysteris'
   },
   {
     title: 'unknown',
-    alt_name: 'The Four Valleys'
+    alt_title: 'The Four Valleys'
   },
   # {
   #   title: 'The Kitáb-i-Íqán',
-  #   alt_name: 'The Kitáb-i-Íqán'
+  #   alt_title: 'The Kitáb-i-Íqán'
   # },
   {
     title: 'unkonwn',
-    alt_name: 'The Seven Valleys'
+    alt_title: 'The Seven Valleys'
   },
   # {
   #   title: 'unknown',
-  #   alt_name: 'The Hidden Words'
+  #   alt_title: 'The Hidden Words'
   # }
 ].freeze

@@ -4,7 +4,9 @@
   <% @quotes.each do |quote| %>
 
     <ul class="ul_no_pad">
-      <li class="no-bullet"><%= link_to quote.text, quote_path(quote), class: "" %></li>
+      <li class="no-bullet">
+        <%= link_to quote.text, quote_path(quote), class: "" %>
+      </li>
     </ul>
 
   <% end %>

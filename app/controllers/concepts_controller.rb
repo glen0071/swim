@@ -1,6 +1,6 @@
 class ConceptsController < ApplicationController
   def index
-    @concepts = Concept.all
+    @concepts = Concept.all.all.sort {|a,b| a.name <=> b.name}
     @name_array = Concept.all.map { |c|
       c.name
     }
