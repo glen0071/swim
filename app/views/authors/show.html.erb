@@ -2,3 +2,12 @@
 
 
 <h4><%= @author.name %></h4>
+
+<ol>
+  <% @writings.each do |writing| %>
+    <li>
+      <%= link_to writing.title, writing_path(writing), class: "" %>
+      <span>(<%= writing.alt_title %>)</span>
+    </li>
+  <% end %>
+</ol>

@@ -63,32 +63,39 @@ TABLETS_ARRAY = [
     title: 'Lawḥ-i-Arḍ-i-Bá',
     alt_title: 'Tablet of the Land of Bá'
   },
-  # {
-  #   title: 'Kitáb-i-Aqdas',
-  #   alt_title: 'Kitáb-i-Aqdas'
-  # },
   {
-    title: 'unknown',
+    title: 'Kitáb-i-Aqdas',
+    alt_title: 'Kitáb-i-Aqdas'
+  },
+  {
+    title: 'Letter to Shaykh Muhammad Taqi',
     alt_title: 'Epistle to the Son of the Wolf'
   },
   {
-    title: 'unknown',
+    title: 'Javáhiru’l-Asrár',
     alt_title: 'Gems of Divine Mysteris'
   },
   {
-    title: 'unknown',
-    alt_title: 'The Four Valleys'
+    title: 'Chahár Vádí',
+    alt_title: 'Four Valleys'
   },
-  # {
-  #   title: 'The Kitáb-i-Íqán',
-  #   alt_title: 'The Kitáb-i-Íqán'
-  # },
   {
-    title: 'unkonwn',
-    alt_title: 'The Seven Valleys'
+    title: 'The Kitáb-i-Íqán',
+    alt_title: 'The Kitáb-i-Íqán'
   },
-  # {
-  #   title: 'unknown',
-  #   alt_title: 'The Hidden Words'
-  # }
+  {
+    title: 'Haft-Vádí',
+    alt_title: 'Seven Valleys'
+  },
+  {
+    title: 'Kalimát-i-Maknúnih',
+    alt_title: 'Hidden Words'
+  }
+].freeze
+
+HOUSE_LETTERS = [
+  {
+    title: "December 28, 2015",
+    alt_title: "Five Year Plan: 2016-2021"
+  }
 ].freeze
