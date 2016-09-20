@@ -15,6 +15,11 @@ class WritingsController < ApplicationController
     @writing = Writing.new
   end
 
+  def show
+    @writing = Writing.find(params['id'])
+    @concepts = @writing.concepts
+  end
+
   private
 
   def quote_params
