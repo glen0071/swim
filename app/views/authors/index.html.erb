@@ -2,7 +2,15 @@
 
 <% @authors.each do |author| %>
   <ul class="ul_no_pad">
-    <li class="no-bullet"><%= link_to author.name, author_path(author), class: "btn btn-primary" %></li>
+    <li class="no-bullet">
+      <%= link_to author.name,
+      author_path(author),
+      class: "btn btn-primary" %>
+      <br>
+      <span class="ministry">Ministry
+        <%= author.start.strftime("%Y") %> - <%= author.end.strftime("%Y") %>
+      </span>
+    </li>
   </ul>
 
 
