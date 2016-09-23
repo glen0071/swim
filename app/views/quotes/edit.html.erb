@@ -1,9 +1,18 @@
-<h1>Edit Quote Page</h1>
+
 
 
 <h4><%= @quote.text %></h4>
 <br>
+
+<em>Currently associated concepts</em>
+<% @quote_concepts.each do |concept| %>
+  <%= button_to concept.name, reference_path, method: 'delete', params: {concept_id: concept.id, quote_id: @quote.id },  class: "concept-btn btn btn-primary col-sm-2" %>
+
+<% end %>
+<br>
+
+
 <em>Click on a conept below to associate it with this quotation.</em>
-<% @concepts.each do |concept| %>
+<% @leftover_concepts.each do |concept| %>
   <%= button_to concept.name, references_path, params: {concept_id: concept.id, quote_id: @quote.id }, class: "concept-btn btn btn-primary col-sm-2" %>
 <% end %>

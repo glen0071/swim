@@ -5,4 +5,11 @@ class ReferencesController < ApplicationController
     quote.concepts << concept
     redirect_to quote_path(quote)
   end
+
+  def destroy
+    reference = Reference.find_by(concept_id: params[:concept_id], quote_id: params[:quote_id])
+    reference.destroy
+
+    redirect_to quote_path(params[:quote_id])
+  end
 end
