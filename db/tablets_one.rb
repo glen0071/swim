@@ -95,7 +95,7 @@ TABLETS_ARRAY = [
 
 HOUSE_LETTERS = [
   {
-    title: "December 28, 2015",
-    alt_title: "Five Year Plan: 2016-2021"
+    title: 'December 28, 2015',
+    alt_title: 'Five Year Plan: 2016-2021'
   }
 ].freeze

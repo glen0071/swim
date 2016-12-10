@@ -6,11 +6,6 @@ RSpec.describe ConceptsController, type: :controller do
       get :index
       expect(response).to render_template('index')
     end
-
-    it 'renders index template' do
-      get :index
-      expect(response).to render_template('index')
-    end
   end
 
   describe 'GET new' do

@@ -6,5 +6,4 @@ class Author < ActiveRecord::Base
 
   has_many :references, through: :quotes
   has_many :concepts, through: :references
-  
 end
