@@ -11,7 +11,7 @@ RSpec.describe ConceptsController, type: :controller do
   #   skip("Add a hash of attributes invalid for your model")
   # }
 
-  describe 'GET index' do
+  describe 'GET #index' do
     it 'renders index template' do
       concept = Concept.create! valid_attributes
       get :index, params: {}
@@ -20,7 +20,17 @@ RSpec.describe ConceptsController, type: :controller do
     end
   end
 
-  describe 'GET new' do
+  describe 'GET #show' do
+    it 'assings the requested concept as @concept' do
+      get :new
+
+      concept = Concept.create! valid_attributes
+      get :show, params: {id: concept.to_param}, session: valid_session
+      expect(assigns(:concept)).to eq(concept)
+    end
+  end
+
+  describe 'GET #new' do
     it 'assigns @concept' do
       get :new
       expect(assigns(:concept)).to be_a_new(Concept)
