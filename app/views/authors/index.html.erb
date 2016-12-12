@@ -7,13 +7,17 @@
       author_path(author),
       class: "btn btn-primary" %>
       <br>
-      <span class="ministry">Life
-        <%= author.start.strftime("%Y") %> - <%= author.end.strftime("%Y") %>
-      </span>
+      <% if author.start %>
+        <span class="ministry">Life
+          <%= author.start.strftime("%Y") %> - <%= author.end.strftime("%Y") %>
+        </span>
+      <% end %>
       <br>
-      <span class="ministry">Ministry
-        <%= author.start.strftime("%Y") %> - <%= author.end.strftime("%Y") %>
-      </span>
+      <% if author.start %>
+        <span class="ministry">Ministry
+          <%= author.start.strftime("%Y") %> - <%= author.end.strftime("%Y") %>
+        </span>
+      <% end %>
     </li>
     <br>
   </ul>
