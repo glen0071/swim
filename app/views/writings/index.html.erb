@@ -4,17 +4,29 @@
 
   <ul class="ul_no_pad">
     <li class="no-bullet">
-      <%= link_to writing.title, writing_path(writing), class: "btn btn-primary" %>
-      <span>(<%= writing.alt_title %>)</span>
+      <%= link_to writing.title, writing_path(writing), class: "writing-name" %> <span>(<%= writing.alt_title %>)</span>
+      by <%= writing.author.name %>
       <br>
       <span>
+
+      </span>
+      <span class="author-metadata">This writing includes quotations on the following Concepts:
         <% writing.concepts.each do |concept| %>
           <%= concept.name %>
         <% end %>
-      </span>
+      </span><br>
     </li>
 
 
   </ul>
 
 <% end %>
+
+<style media="screen">
+  .writing-name {
+    font-size: 1.3em;
+  }
+  .author-metadata {
+    margin-left: 15px;
+  }
+</style>
