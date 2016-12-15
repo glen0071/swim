@@ -3,25 +3,23 @@
 <% @authors.each do |author| %>
   <ul class="ul_no_pad">
     <li class="no-bullet">
-      <%= link_to author.name,
-      author_path(author),
-      class: "btn btn-primary" %>
-      <br>
+      <%= link_to author.name, author_path(author), class: 'author-name'%> (<%= author.start.strftime("%Y") %> - <%= author.end.strftime("%Y") %>)
       <% if author.start %>
-        <span class="ministry">Life
-          <%= author.start.strftime("%Y") %> - <%= author.end.strftime("%Y") %>
-        </span>
+        <span class="ministry"></span>
       <% end %>
       <br>
-      <% if author.start %>
-        <span class="ministry">Ministry
-          <%= author.start.strftime("%Y") %> - <%= author.end.strftime("%Y") %>
-        </span>
-      <% end %>
+      <span class="author-metadata">This Author has written the following books:</span><br>
+      <span class="author-metadata">Read this author's quotations on the following Concepts:</span><br>
     </li>
     <br>
   </ul>
-
-
-
 <% end %>
+
+<style media="screen">
+  .author-name {
+    font-size: 1.3em;
+  }
+  .author-metadata {
+    margin-left: 15px;
+  }
+</style>
