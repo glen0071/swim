@@ -22,7 +22,15 @@ class QuotesController < ApplicationController
   end
 
   def create
-    @quote = Quote.new
+    binding.pry
+    @quote = Quote.new(quote_params )
+    binding.pry
+
+    if @quote.save
+      redirect_to @quote
+    else
+      render 'new'
+    end
   end
 
   private
