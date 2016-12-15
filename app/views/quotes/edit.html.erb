@@ -1,16 +1,34 @@
 
 <h4><%= @quote.text %></h4>
-<br>
 
-<em>Currently associated concepts</em>
-<% @quote_concepts.each do |concept| %>
-  <%= button_to concept.name, reference_path, method: 'delete', params: {concept_id: concept.id, quote_id: @quote.id },  class: "concept-btn btn btn-primary col-sm-2" %>
-
-<% end %>
-<br>
+<%= render 'form', quote: @quote  %>
+<!-- <em>Currently associated concepts</em> -->
+<%# @quote_concepts.each do |concept| %>
+  <%# button_to concept.name, reference_path, method: 'delete', params: {concept_id: concept.id, quote_id: @quote.id },  class: "concept-btn btn btn-primary col-sm-2" %>
+<%# end %>
 
 
-<em>Click on a conept below to associate it with this quotation.</em>
-<% @leftover_concepts.each do |concept| %>
-  <%= button_to concept.name, references_path, params: {concept_id: concept.id, quote_id: @quote.id }, class: "concept-btn btn btn-primary col-sm-2" %>
-<% end %>
+
+<!-- <em>Click on a conept below to associate it with this quotation.</em> -->
+<%# @leftover_concepts.each do |concept| %>
+  <%# button_to concept.name, references_path, params: {concept_id: concept.id, quote_id: @quote.id }, class: "concept-btn btn btn-primary col-sm-2" %>
+<%# end %>
+
+
+<%# check_box(@quote, method, options = {}, checked_value = "1", unchecked_value = "0") %>
+<%# check_box("concept", concept.id) %>
+<%# @quote_concepts.each do |concept| %>
+  <%# check_box_tag 'professor[expertise][]', 'Physics', checked('Physics'), id: 'expertise_physics' %>
+
+
+
+  <%# button_to concept.name, reference_path, method: 'delete', params:
+  {concept_id: concept.id, quote_id: @quote.id },  class: "concept-btn btn btn-primary col-sm-2" %>
+
+<%# end %>
+
+<style media="screen">
+  .selected {
+    background-color: #00FFFF;
+  }
+</style>

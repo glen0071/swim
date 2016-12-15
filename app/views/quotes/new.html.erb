@@ -1,12 +1,17 @@
 <h3>Add Quote</h3>
 
 <%= form_for :quote, url: quotes_path do |f| %>
-  <%# render "shared/errors", object: :quote %>
-  <%= f.label :text, class: "" %>
-  <%= f.text_area :text, class: "form-control" %>
-  <%= f.collection_select(:author_id, Author.all, :id, :name) %>
-  <%= f.collection_select(:writing_id, Writing.all, :id, :title) %>
 
-  <%= f.submit "Save Publication" %>
+  <%= render partial: 'form', locals: {quote: :quote, f: f} %>
+
+
+
+  <%# render "shared/errors", object: :quote %>
+  <%# f.label :text, class: "" %>
+  <%# f.text_area :text, class: "form-control" %>
+  <%# f.collection_select(:author_id, Author.all, :id, :name) %>
+  <%# f.collection_select(:writing_id, Writing.all, :id, :title) %>
+
+  <%# f.submit "Save Publication" %>
 
 <% end %>

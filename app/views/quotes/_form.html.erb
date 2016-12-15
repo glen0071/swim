@@ -1,0 +1,18 @@
+
+<%= form_for(quote) do |f| %>
+
+  <%= f.label :text, class: "" %>
+  <%= f.text_area :text, class: "form-control" %>
+  <%= f.collection_select(:author_id, Author.all, :id, :name) %>
+  <%= f.collection_select(:writing_id, Writing.all, :id, :title) %>
+
+  <%= f.collection_check_boxes(:concept_ids, Concept.all, :id, :name, class: "checkbox") do |b| %>
+    <%= b.label(class: "concept-btn col-sm-2") %>
+    <%= b.check_box(class: "concept-btn col-sm-2") %>
+  <% end %>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+
+<% end  %>
