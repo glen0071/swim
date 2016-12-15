@@ -7,8 +7,8 @@
   <%= f.collection_select(:writing_id, Writing.all, :id, :title) %>
 
   <%= f.collection_check_boxes(:concept_ids, Concept.all, :id, :name, class: "checkbox") do |b| %>
-    <%= b.label(class: "concept-btn col-sm-2") %>
-    <%= b.check_box(class: "concept-btn col-sm-2") %>
+  <%= b.check_box(class: "hide hidden-checkbox") %>
+    <%= b.label(class: "checkbox-label col-sm-2") %>
   <% end %>
 
   <div class="actions">
@@ -16,3 +16,13 @@
   </div>
 
 <% end  %>
+
+<style media="screen">
+  .hide {
+    display: none;
+  }
+
+  .hidden-checkbox:checked + .checkbox-label, .selected {
+    background-color: #00FFFF;
+  }
+</style>
