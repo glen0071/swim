@@ -6,7 +6,15 @@
   <%= f.text_field :title, class: "form-control" %>
   <%= f.label :alt_title, class: "" %>
   <%= f.text_field :alt_title, class: "form-control" %>
+  <%= f.collection_select(:author_id, Author.all, :id, :name, {}, {class: "form-control dropdown-select"}) %><br>
 
-  <%= f.submit "Save Writing" %>
+  <%= f.submit "Save Writing", class: 'btn btn-info submit-btn' %>
 
 <% end %>
+
+
+<style media="screen">
+  .dropdown-select {
+    margin-top: 2em;
+  }
+</style>

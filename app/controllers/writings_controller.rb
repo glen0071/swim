@@ -12,7 +12,13 @@ class WritingsController < ApplicationController
   end
 
   def create
-    @writing = Writing.new
+    @writing = Writing.new(writing_params)
+
+    if @writing.save
+      redirect_to @writing
+    else
+      render 'new'
+    end
   end
 
   def show
@@ -21,8 +27,7 @@ class WritingsController < ApplicationController
   end
 
   private
-
-  def quote_params
-    params.require(:writing).permit(:title, :alt_title)
+  def writing_params
+    params.require(:writing).permit(:title, :alt_title, :author_id)
   end
 end

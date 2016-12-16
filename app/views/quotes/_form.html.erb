@@ -4,10 +4,9 @@
   <%= f.text_area :text, class: "form-control" %>
 
   <div class="quote-data">
-    <%= f.collection_select(:author_id, Author.all, :id, :name) %>
-    <%= f.collection_select(:writing_id, Writing.all, :id, :title) %>
+    <%= f.collection_select(:author_id, Author.all, :id, :name, {}, {class: "form-control dropdown-select", id: 'select-author'}) %>
+    <%= f.collection_select(:writing_id, Writing.all, :id, :title, {}, {class: "form-control dropdown-select", id: 'select-writing'}) %>
   </div>
-
 
   <div class="">
     <%= f.collection_check_boxes(:concept_ids, Concept.all, :id, :name) do |b| %>
@@ -33,5 +32,8 @@
   }
   .quote-data {
     margin: 2em;
+  }
+  .dropdown-select {
+    margin-top: 2em;
   }
 </style>
