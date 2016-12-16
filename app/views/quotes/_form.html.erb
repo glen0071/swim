@@ -1,19 +1,22 @@
-
 <%= form_for(quote) do |f| %>
 
   <%= f.label :text, class: "" %>
   <%= f.text_area :text, class: "form-control" %>
-  <%= f.collection_select(:author_id, Author.all, :id, :name) %>
-  <%= f.collection_select(:writing_id, Writing.all, :id, :title) %>
 
-  <%= f.collection_check_boxes(:concept_ids, Concept.all, :id, :name, class: "checkbox") do |b| %>
-  <%= b.check_box(class: "hide hidden-checkbox") %>
-    <%= b.label(class: "checkbox-label col-sm-2") %>
-  <% end %>
-
-  <div class="actions">
-    <%= f.submit %>
+  <div class="quote-data">
+    <%= f.collection_select(:author_id, Author.all, :id, :name) %>
+    <%= f.collection_select(:writing_id, Writing.all, :id, :title) %>
   </div>
+
+
+  <div class="">
+    <%= f.collection_check_boxes(:concept_ids, Concept.all, :id, :name) do |b| %>
+      <%= b.check_box(class: "hide hidden-checkbox") %>
+      <%= b.label(class: "checkbox-label col-sm-2") %>
+    <% end %>
+  </div>
+
+  <%= f.submit class: 'btn btn-info submit-btn' %>
 
 <% end  %>
 
@@ -21,8 +24,14 @@
   .hide {
     display: none;
   }
-
   .hidden-checkbox:checked + .checkbox-label, .selected {
     background-color: #00FFFF;
+  }
+  .submit-btn {
+    margin-top: 2em;
+    margin-right: 60%;
+  }
+  .quote-data {
+    margin: 2em;
   }
 </style>
