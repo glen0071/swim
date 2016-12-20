@@ -3,8 +3,8 @@
 <% @authors.each do |author| %>
   <ul class="ul_no_pad">
     <li class="no-bullet">
-      <%= link_to author.name, author_path(author), class: 'author-name'%> (<%= author.start.strftime("%Y") %> - <%= author.end.strftime("%Y") %>)
-      <% if author.start %>
+      <% if author.start && author.end %>
+        <%= link_to author.name, author_path(author), class: 'author-name'%> (<%= author.start %> - <%= author.end %>)
         <span class="ministry"></span>
       <% end %>
       <br>
