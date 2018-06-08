@@ -14,6 +14,8 @@ gem 'jbuilder', '~> 2.0'
 gem 'bootstrap-sass'
 gem 'jquery-ui-rails'
 gem 'rails-controller-testing'
+gem 'responders'
+gem 'rack-cors', require: 'rack/cors'
 
 gem 'sdoc', '~> 0.4.0', group: :doc
 

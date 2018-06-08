@@ -4,7 +4,7 @@ require_relative 'authors_one'
 require_relative 'concepts'
 
 AUTHORS_ARRAY.each do |authors_hash|
-  Author.create!(name: authors_hash[:name], start: authors_hash[:start], end: authors_hash[:end])
+  Author.find_or_create_by!(name: authors_hash[:name], start: authors_hash[:start], end: authors_hash[:end])
 end
 
 bab = Author.find_by(name: "The Báb")
