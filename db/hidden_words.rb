@@ -350,11 +350,13 @@ HIDDEN_WORDS_STRING_ARRAY = [  {
   },
 
   # Part II--From the Persian
-  # In the Name of the Lord of Utterance, The Mighty.  {
+  # In the Name of the Lord of Utterance, The Mighty.
+  {
     language: 'Persian',
     number: 1,
     text: "O YE PEOPLE THAT HAVE MINDS TO KNOW AND EARS TO HEAR! The first call of the Beloved is this: O mystic nightingale! Abide not but in the rose-garden of the spirit. O messenger of the Solomon of love! Seek thou no shelter except in the Sheba of the well-beloved, and O immortal phoenix! dwell not save on the mount of faithfulness. Therein is thy habitation, if on the wings of thy soul thou soarest to the realm of the infinite and seekest to attain thy goal."
-  },  {
+  },
+  {
     language: 'Persian',
     number: 2,
     text: "O SON OF SPIRIT! The bird seeketh its nest; the nightingale the charm of the rose; whilst those birds, the hearts of men, content with transient dust, have strayed far from their eternal nest, and with eyes turned towards the slough of heedlessness are bereft of the glory of the divine presence. Alas! How strange and pitiful; for a mere cupful, they have turned away from the billowing seas of the Most High, and remained far from the most effulgent horizon."
@@ -443,8 +445,7 @@ HIDDEN_WORDS_STRING_ARRAY = [  {
     language: 'Persian',
     number: 19,
     text: "O MY FRIENDS! Have ye forgotten that true and radiant morn, when in those hallowed and blessed surroundings ye were all gathered in My presence beneath the shade of the tree of life, which is planted in the all-glorious paradise? Awe-struck ye listened as I gave utterance to these three most holy words: O friends! Prefer not your will to Mine, never desire that which I have not desired for you, and approach Me not with lifeless hearts, defiled with worldly desires and cravings. Would ye but sanctify your souls, ye would at this present hour recall that place and those surroundings, and the truth of My utterance should be made evident unto all of you."
-  }
-
+  },
   {
     language: 'Persian',
     number: 20,
@@ -460,7 +461,6 @@ HIDDEN_WORDS_STRING_ARRAY = [  {
     number: 22,
     text: "O SON OF DESIRE! The learned and the wise have for long years striven and failed to attain the presence of the All-Glorious; they have spent their lives in search of Him, yet did not behold the beauty of His countenance. Thou without the least effort didst attain thy goal, and without search hast obtained the object of thy quest. Yet, notwithstanding, thou didst remain so wrapt in the veil of self, that thine eyes beheld not the beauty of the Beloved, nor did thy hand touch the hem of His robe. Ye that have eyes, behold and wonder."
   },
-
   {
     language: 'Persian',
     number: 23,
@@ -605,7 +605,7 @@ HIDDEN_WORDS_STRING_ARRAY = [  {
   {
     language: 'Persian',
     number: 51,
-    text: "O SON OF MY HANDMAID! Be not troubled in poverty nor confident in riches, for poverty is followed by riches, and riches are followed by poverty. Yet to be poor in all save God is a wondrous gift, belittle not the value thereof, for in the end it will make thee rich in God, and thus thou shalt know the meaning of the utterance, "In truth ye are the poor," and the holy words, "God is the all-possessing," shall even as the true morn break forth gloriously resplendent upon the horizon of the lover's heart, and abide secure on the throne of wealth."
+    text: "O SON OF MY HANDMAID! Be not troubled in poverty nor confident in riches, for poverty is followed by riches, and riches are followed by poverty. Yet to be poor in all save God is a wondrous gift, belittle not the value thereof, for in the end it will make thee rich in God, and thus thou shalt know the meaning of the utterance, 'In truth ye are the poor,' and the holy words, 'God is the all-possessing,' shall even as the true morn break forth gloriously resplendent upon the horizon of the lover's heart, and abide secure on the throne of wealth."
   },
   {
     language: 'Persian',
@@ -735,7 +735,7 @@ HIDDEN_WORDS_STRING_ARRAY = [  {
   {
     language: 'Persian',
     number: 77,
-    text: "O SON OF JUSTICE! In the night-season the beauty of the immortal Being hath repaired from the emerald height of fidelity unto the Sadratu'l-Muntahá, and wept with such a weeping that the concourse on high and the dwellers of the realms above wailed at His lamenting. Whereupon there was asked, Why the wailing and weeping? He made reply: As bidden I waited expectant upon the hill of faithfulness, yet inhaled not from them that dwell on earth the fragrance of fidelity. Then summoned to return I beheld, and lo! certain doves of holiness were sore tried within the claws of the dogs of earth. Thereupon the Maid of heaven hastened forth unveiled and resplendent from Her mystic mansion, and asked of their names, and all were told but one. And when urged, the first letter thereof was uttered, whereupon the dwellers of the celestial chambers rushed forth out of their habitation of glory. And whilst the second letter was pronounced they fell down, one and all, upon the dust. At that moment a voice was heard from the inmost shrine: "Thus far and no farther." Verily We bear witness to that which they have done and now are doing."
+    text: "O SON OF JUSTICE! In the night-season the beauty of the immortal Being hath repaired from the emerald height of fidelity unto the Sadratu'l-Muntahá, and wept with such a weeping that the concourse on high and the dwellers of the realms above wailed at His lamenting. Whereupon there was asked, Why the wailing and weeping? He made reply: As bidden I waited expectant upon the hill of faithfulness, yet inhaled not from them that dwell on earth the fragrance of fidelity. Then summoned to return I beheld, and lo! certain doves of holiness were sore tried within the claws of the dogs of earth. Thereupon the Maid of heaven hastened forth unveiled and resplendent from Her mystic mansion, and asked of their names, and all were told but one. And when urged, the first letter thereof was uttered, whereupon the dwellers of the celestial chambers rushed forth out of their habitation of glory. And whilst the second letter was pronounced they fell down, one and all, upon the dust. At that moment a voice was heard from the inmost shrine: 'Thus far and no farther.' Verily We bear witness to that which they have done and now are doing."
   },
   {
     language: 'Persian',
