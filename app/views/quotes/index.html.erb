@@ -5,7 +5,10 @@
 
     <ul class="ul_no_pad">
       <li class="no-bullet">
-        <%= link_to quote.text, quote_path(quote), class: "" %>
+        <div><%= link_to quote.text, quote_path(quote), class: "" %></div>
+        <div>Author: <%= link_to quote.author.name, author_path(quote.author), class: "" %></div>
+        <div>Source: <%= link_to quote.writing.title, writing_path(quote.writing), class: "" %></div>
+
       </li>
     </ul>
 
