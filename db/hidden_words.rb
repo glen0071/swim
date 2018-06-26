@@ -2,11 +2,13 @@ HIDDEN_WORDS_STRING_ARRAY = [  {
     language: 'Arabic',
     number: 1,
     text: "O SON OF SPIRIT! My first counsel is this: Possess a pure, kindly and radiant heart, that thine may be a sovereignty ancient, imperishable and everlasting."
-  },  {
+  },
+  {
     language: 'Arabic',
     number: 2,
     text: "O SON OF SPIRIT! The best beloved of all things in My sight is Justice; turn not away therefrom if thou desirest Me, and neglect it not that I may confide in thee. By its aid thou shalt see with thine own eyes and not through the eyes of others, and shalt know of thine own knowledge and not through the knowledge of thy neighbor. Ponder this in thy heart; how it behooveth thee to be. Verily justice is My gift to thee and the sign of My loving-kindness. Set it then before thine eyes."
-  },  {
+  },
+  {
     language: 'Arabic',
     number: 3,
     text: "O SON OF MAN! Veiled in My immemorial being and in the ancient eternity of My essence, I knew My love for thee; therefore I created thee, have engraved on thee Mine image and revealed to thee My beauty."
@@ -25,11 +27,13 @@ HIDDEN_WORDS_STRING_ARRAY = [  {
     language: 'Arabic',
     number: 6,
     text: "O SON OF BEING! Thy Paradise is My love; thy heavenly home, reunion with Me. Enter therein and tarry not. This is that which hath been destined for thee in Our kingdom above and Our exalted dominion."
-  },  {
+  },
+  {
     language: 'Arabic',
     number: 7,
     text: "O SON OF MAN! If thou lovest Me, turn away from thyself; and if thou seekest My pleasure, regard not thine own; that thou mayest die in Me and I may eternally live in thee."
-  },  {
+  },
+  {
     language: 'Arabic',
     number: 8,
     text: "O SON OF SPIRIT! There is no peace for thee save by renouncing thyself and turning unto Me; for it behooveth thee to glory in My name, not in thine own; to put thy trust in Me and not in thyself, since I desire to be loved alone and above all that is."

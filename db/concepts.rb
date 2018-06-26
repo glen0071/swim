@@ -1,8 +1,30 @@
-CONCEPTS = [
-  'truth', 'justice', 'purity', 'kindness', 'radiance', "organic
-growth", 'life after death', 'love', 'devotion', 'sovereignty', 'unity',
-  'respect', 'cleanliness', 'forgiveness', 'humility', 'truthfulness',
-  'trustworthiness', 'reverence', 'service', 'patience', 'self-discipline',
-  'joy', 'faith', 'gratefulness', 'detachment', 'detachment', 'gentleness',
-  'praiseworthy', 'creativity'
+CONCEPTS =  [
+  "abider", "abiding", "allglorious", "adored", "powerful", "allbounteous",
+  "almighty", "allbountiful", "mighty", "allcompelling", "healing",
+  "allforgiving", "exalted", "allgenerous", "sufficing", "allglorified",
+  "generous", "merciful", "allhighest", "everforgiving", "allinformed",
+  "gracious", "allknowing", "compassionate", "allloving", "allmerciful",
+  "bountiful", "allperceiving", "allwise", "allpossessing", "dayspring",
+  "allpowerful", "omnipotent", "allpreserving", "glorious", "allseeing",
+  "allsubduing", "selfsubsisting", "allsufficing", "bestower", "ancient",
+  "possessor", "announcer", "protector", "answerer", "provider", "assister",
+  "sovereign", "attractor", "supreme", "author", "creator", "beauteous",
+  "forgiver", "benevolent", "forgiving", "bestbeloved", "maker", "pardoner",
+  "bestowing", "source", "bounteous", "lordship", "changeless", "master",
+  "chastiser", "clement", "fashioner", "concealer", "fountainhead", "concealing",
+  "grandeur", "confirmer", "greatest", "conqueror", "healer", "ruler", "desired",
+  "destroyer", "dispeller", "everbestowing", "doer", "omniscient", "enchanter",
+  "ordainer", "enkindler", "peerless", "enrapture", "preserver", "everabiding",
+  "revealer", "sufficer", "everbounteous", "unconstrained", "wellbeloved",
+  "evergiving", "expounder", "incomparable", "knower", "remover", "giving",
+  "sustainer", "godhead", "hearing", "highest", "inaccessible", "invincible",
+  "invoked", "lightgiver", "physician", "selfsubsistent", "magnanimous",
+  "succorer", "magnificent", "omnipresent", "onlooker", "ordaining", "patience",
+  "savior", "sublime", "succoring", "transcendent", "unconditioned", "unfastener",
+  "unfettered", "unfolder", "unlocker", "unsearchable", "untrammelled",
+  "upraiser", "uprooter", "afterlife", "cleanliness", "creativity", "detachment",
+  "devotion", "faith", "forgiveness", "gentleness", "gratefulness", "humility",
+  "joy", "justice", "kindness", "love", "organic growth", "praiseworthy",
+  "purity", "radiance", "respect", "reverence", "self-discipline", "service",
+  "sovereignty", "trustworthiness", "truth", "truthfulness", "unity", "sacred"
 ].freeze
