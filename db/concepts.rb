@@ -26,5 +26,6 @@ CONCEPTS =  [
   "devotion", "faith", "forgiveness", "gentleness", "gratefulness", "humility",
   "joy", "justice", "kindness", "love", "organic growth", "praiseworthy",
   "purity", "radiance", "respect", "reverence", "self-discipline", "service",
-  "sovereignty", "trustworthiness", "truth", "truthfulness", "unity", "sacred"
+  "sovereignty", "trustworthiness", "truth", "truthfulness", "unity", "sacred",
+  "youth", "teaching",
 ].freeze

@@ -18,10 +18,15 @@
       <li><a href="<%= quotes_path %>">Quotes List</a></li>
     </ul>
     <ul class="nav navbar-nav navbar-right">
-      <li class="active"><a href="<%= new_quote_path %>">Add Quote</a></li>
-      <!-- <li><a href="<%= new_author_path %>">Add Author</a></li> -->
-      <li><a href="<%= new_concept_path %>">Add Concept</a></li>
-      <li><a href="<%= new_writing_path %>">Add Writing</a></li>
+      <% if current_user %>
+        <li><%= link_to 'Logout', destroy_user_session_path, method: :delete %></li>
+        <li><a href="<%= new_quote_path %>">Add Quote</a></li>
+        <li><a href="<%= new_concept_path %>">Add Concept</a></li>
+        <li><a href="<%= new_writing_path %>">Add Writing</a></li>
+      <% else %>
+        <li><%= link_to "Sign Up", new_user_registration_path %></li>
+        <li><%= link_to "Sign In", new_user_session_path %></li>
+      <% end %>
     </ul>
   </div><!--/.nav-collapse -->
 </div><!--/.container-fluid -->

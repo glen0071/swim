@@ -1,5 +1,5 @@
 require_relative 'hidden_words'
-require_relative 'tablets_one'
+require_relative 'writings_one'
 require_relative 'authors_one'
 require_relative 'concepts'
 
@@ -31,3 +31,5 @@ HIDDEN_WORDS_STRING_ARRAY.each do |hw_hash|
   hidden_words.quotes << new_quote
   baha.quotes << new_quote
 end
+
+User.create!(email: 'mail@mail.com', password: 'password') unless user = User.find!(email: 'mail@mail.com')
