@@ -1,22 +1,26 @@
 source 'https://rubygems.org'
 
+# Essentials
 ruby '2.5.1'
 gem 'rails', '~> 5.0.0'
 
+# Backend
 gem 'pg', '~> 0.18'
 gem 'puma', '~> 3.0'
 gem 'devise', '~> 4.4.3'
 
-gem 'sass-rails', '~> 5.0'
-gem 'uglifier', '>= 1.3.0'
+
+# Frontend
 gem 'coffee-rails', '~> 4.1.0'
+
+gem 'slim-rails'
 gem 'jquery-rails'
 gem 'jbuilder', '~> 2.0'
 gem 'bootstrap-sass'
 gem 'jquery-ui-rails'
-gem 'rails-controller-testing'
+gem 'sass-rails', '~> 5.0'
+gem 'uglifier', '>= 1.3.0'
 gem 'responders'
-gem 'rack-cors', require: 'rack/cors'
 
 gem 'sdoc', '~> 0.4.0', group: :doc
 

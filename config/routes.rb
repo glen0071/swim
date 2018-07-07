@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get '/about', to: "home#about"
+
   devise_for :users
   resources :quotes
   resources :authors
