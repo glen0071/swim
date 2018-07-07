@@ -27,5 +27,5 @@ CONCEPTS =  [
   "joy", "justice", "kindness", "love", "organic growth", "praiseworthy",
   "purity", "radiance", "respect", "reverence", "self-discipline", "service",
   "sovereignty", "trustworthiness", "truth", "truthfulness", "unity", "sacred",
-  "youth", "teaching",
+  "youth", "teaching", "social action"
 ].freeze

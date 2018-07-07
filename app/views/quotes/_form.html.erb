@@ -4,8 +4,8 @@
   <%= f.text_area :text, class: "form-control" %>
 
   <div class="quote-data">
-    <%= f.collection_select(:author_id, Author.all, :id, :name, {}, {class: "form-control dropdown-select", id: 'select-author'}) %>
-    <%= f.collection_select(:writing_id, Writing.all, :id, :title, {}, {class: "form-control dropdown-select", id: 'select-writing'}) %>
+    <%= f.collection_select(:author_id, Author.all.order(:name), :id, :name, {}, {class: "form-control dropdown-select", id: 'select-author'}) %>
+    <%= f.collection_select(:writing_id, Writing.all.order(:title), :id, :title_with_alt_title, {}, {class: "form-control dropdown-select", id: 'select-writing'}) %>
   </div>
 
   <div class="">

@@ -2,7 +2,7 @@ class ConceptsController < ApplicationController
   before_action :authenticate_user!, except: [:index]
 
   def index
-    @concepts = Concept.all.all.sort { |a, b| a.name <=> b.name }
+    @concepts = Concept.all.sort { |a, b| a.name <=> b.name }
     @name_array = Concept.all.map(&:name)
   end
 

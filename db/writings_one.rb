@@ -70,14 +70,14 @@ BAB_TABLETS_ARRAY = [
     notes: 'This is one of the two important works the Báb penned in Isfahan. It was written spontaneously and publicly in response to a request by Mir Sayyid Muhammad, the chief cleric of the city; much of it was written in one evening, to the astonishment to those present'
   },
   {
-    title: "Persian Bayán'",
+    title: "Bayán, Persian",
     alt_title: '',
     date: 'late 1847 or early 1848',
     location: 'Maku',
     notes: ''
   },
   {
-    title: "Arabic Bayán'",
+    title: "Bayán, Arabic ",
     alt_title: '',
     date: 'late 1847 or early 1848',
     location: 'Maku',
