@@ -1,5 +1,5 @@
 class ConceptsController < ApplicationController
-  before_action :authenticate_user!, except: [:index]
+  before_action :authenticate_user!, except: [:index, :show]
 
   def index
     @concepts = Concept.all.sort { |a, b| a.name <=> b.name }

@@ -6,7 +6,6 @@ $(document).on('ready page:load', function () {
   searchBar.keyup(function() {
     var input = searchBar.val();
     var regex = RegExp(input,'i');
-    // var result = regex.test('test each concept, if true, display');
     if (input === '')
       { $('.concept-btn').removeClass('hide-btn'); }
     else

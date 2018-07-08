@@ -8,10 +8,11 @@
     <%= f.collection_select(:writing_id, Writing.all.order(:title), :id, :title_with_alt_title, {}, {class: "form-control dropdown-select", id: 'select-writing'}) %>
   </div>
 
+  <input type="text" placeholder="Filter Concepts" id="concepts-search" class="form-control">
   <div class="">
     <%= f.collection_check_boxes(:concept_ids, Concept.all, :id, :name) do |b| %>
       <%= b.check_box(class: "hide hidden-checkbox") %>
-      <%= b.label(class: "checkbox-label col-sm-2") %>
+      <%= b.label(class: "checkbox-label col-sm-2 concept-btn btn btn-success col-sm-2", id: b.object.name) %>
     <% end %>
   </div>
 
@@ -24,7 +25,8 @@
     display: none;
   }
   .hidden-checkbox:checked + .checkbox-label, .selected {
-    background-color: #00FFFF;
+    background-color: lightgreen;
+    border-color: lightgreen;
   }
   .submit-btn {
     margin-top: 2em;
