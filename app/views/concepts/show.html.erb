@@ -1,9 +1,19 @@
-<h1>Concept Page</h1>
-
-<h4><%= @concept.name %></h4>
+<h2><%= @concept.name.upcase %></h2>
 
 <% @quotes.each do |quote| %>
 
   <%= quote.text %>
 
 <% end %>
+
+<br>
+<br>
+
+<%= button_tag 'Add a Quote', id: 'add-quote-to-concept', class: 'btn btn-primary' %>
+
+<br>
+<br>
+
+<div id="add-quote-to-concept-form-div" class="hide-form" data-concept-shown="<%= @concept.name %>">
+  <%= render partial: 'quotes/form', locals: {quote: @quote} %>
+</div>

@@ -28,6 +28,7 @@ class ConceptsController < ApplicationController
     @concept = Concept.find(params[:id])
 
     @quotes = @concept.quotes
+    @quote = Quote.new
   end
 
   private
