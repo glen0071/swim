@@ -9,7 +9,11 @@
       <% end %>
       <br>
       <span class="author-metadata">This Author has written the following books:</span><br>
-      <span class="author-metadata">Read this author's quotations on the following Concepts:</span><br>
+      <span class="author-metadata">Read this author's quotations on the following Concepts:
+        <% author.concepts.each_with_index do |concept, i| %>
+          <%= link_to concept.name, concept_path(concept) %><%= i < author.concepts.length - 1 ? ',' : '' %>
+        <% end %>
+      </span><br>
     </li>
     <br>
   </ul>

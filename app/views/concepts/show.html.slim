@@ -1,0 +1,18 @@
+h2 Quotations on #{@concept.name.capitalize}
+- @quotes.each do |quote|
+  p = quote.text
+  p.author-name = quote.author.name
+  - array = []
+  - quote.concepts.each do |c|
+    - array << c.name unless c === @concept
+  - if array.length > 0
+    p Other concepts: #{array.join(',')}
+br
+br
+= button_tag 'Add a Quote', id: 'add-quote-to-concept', class: 'btn btn-primary'
+br
+br
+|  <div id="add-quote-to-concept-form-div" class="hide-form" data-concept-shown="
+= @concept.name
+| ">
+= render partial: 'quotes/form', locals: {quote: @quote}

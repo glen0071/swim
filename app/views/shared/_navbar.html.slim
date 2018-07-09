@@ -1,0 +1,43 @@
+nav.navbar.navbar-expand-lg.navbar-light.bg-light
+  a.navbar-brand[href="/"]
+    | Swim
+  #navbarSupportedContent.collapse.navbar-collapse
+    ul.navbar-nav.mr-auto
+      li.nav-item.dropdown
+        a#navbarListsDropdown.nav-link.dropdown-toggle[href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"]
+          |  See Items
+        .dropdown-menu[aria-labelledby="navbarListsDropdown"]
+          |  <a class="dropdown-item" href="
+          = concepts_path
+          | ">Concepts List
+          |  <a class="dropdown-item" href="
+          = authors_path
+          | ">Authors List
+          |  <a class="dropdown-item" href="
+          = writings_path
+          | ">Writings List
+          |  <a class="dropdown-item" href="
+          = quotes_path
+          | ">Quotes List
+    ul.navbar-nav.ml-auto
+      - if current_user
+        li.nav-item.dropdown
+          a#navbarAddDropdown.nav-link.dropdown-toggle[href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"]
+            |  Add Items
+          .dropdown-menu[aria-labelledby="navbarAddDropdown"]
+            |  <a class="dropdown-item" href="
+            = new_quote_path
+            | ">Add Quote
+            |  <a class="dropdown-item" href="
+            = new_concept_path
+            | ">Add Concept
+            |  <a class="dropdown-item" href="
+            = new_writing_path
+            | ">Add Writing
+      - else
+        li
+          = link_to "Login", about_path, class: 'nav-link'
+        li
+          = link_to "Logout", about_path, class: 'nav-link'
+      li
+        = link_to "About", about_path, class: 'nav-link'
