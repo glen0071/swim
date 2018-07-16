@@ -23,6 +23,7 @@ nav.navbar.navbar-expand-lg.navbar-light.bg-light
           | ">Quotes List
     ul.navbar-nav.ml-auto
       - if current_user
+        = link_to "Logout", destroy_user_session_path, class: 'nav-link'
         li.nav-item.dropdown
           a#navbarAddDropdown.nav-link.dropdown-toggle[href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"]
             |  Add Items
@@ -36,10 +37,10 @@ nav.navbar.navbar-expand-lg.navbar-light.bg-light
             |  <a class="dropdown-item" href="
             = new_writing_path
             | ">Add Writing
+          li
+            = link_to "About", about_path, class: 'nav-link'
       - else
         li
-          = link_to "Login", about_path, class: 'nav-link'
+          = link_to "Login", new_user_session_path, class: 'nav-link'
         li
-          = link_to "Logout", about_path, class: 'nav-link'
-      li
-        = link_to "About", about_path, class: 'nav-link'
+          = link_to "About", about_path, class: 'nav-link'

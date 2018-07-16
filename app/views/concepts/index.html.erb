@@ -8,7 +8,7 @@
 <div id="btn-container" class="btn-container">
   <% @concepts.each do |concept| %>
     <%= link_to concept.name, concept_path(concept),
-      class: "concept-btn btn btn-success col-sm-2",
+      class: "concept-btn btn btn-success col-lg-2 concept-button",
       id: "#{concept.name}"
     %>
   <% end %>

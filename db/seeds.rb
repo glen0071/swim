@@ -3,8 +3,9 @@ require_relative 'writings_one'
 require_relative 'authors_one'
 require_relative 'concepts'
 
-AUTHORS_ARRAY.each do |authors_hash|
-  Author.find_or_create_by!(name: authors_hash[:name], start: authors_hash[:start], end: authors_hash[:end])
+
+task :seed_authors => :environment do
+
 end
 
 bab = Author.find_by(name: "The Báb")

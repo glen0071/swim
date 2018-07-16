@@ -4,7 +4,7 @@
   <ul class="ul_no_pad">
     <li class="no-bullet">
       <% if author.start && author.end %>
-        <%= link_to author.name, author_path(author), class: 'author-name'%> (<%= author.start %> - <%= author.end %>)
+        <%= link_to author.name, author_path(author), class: 'author-name-title'%> (<%= author.start %> - <%= author.end %>)
         <span class="ministry"></span>
       <% end %>
       <br>
