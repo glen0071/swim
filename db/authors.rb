@@ -7,14 +7,14 @@ AUTHORS_ARRAY = [
     death:  Date.parse('July 9, 1850')
   },
   {
-    name:   "Bahá'u'lláh",
+    name:   "Bahá’u’lláh",
     start:  Date.parse('21 April 1863'),
     end:    Date.parse('29 May 1892'),
     brirth: Date.parse('12 November 1817'),
     death:  Date.parse('29 May 1892')
   },
   {
-    name: "'Abdu'l-Bahá",
+    name: "‘Abdu’l-Bahá",
     start:  Date.parse('21 April 1863'),
     end:    Date.parse('28 November 1921'),
     brith:  Date.parse('23 May 1844'),

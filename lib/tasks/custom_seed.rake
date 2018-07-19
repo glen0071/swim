@@ -1,7 +1,9 @@
-desc "One line task description"
+require_relative '../../db/authors'
+require_relative '../../db/unity_quotes'
+
+desc "Load authors into db"
 namespace :seeding_db do
   task :seed_authors => [ :environment ] do
-    load File.join('db', 'authors.rb')
     AUTHORS_ARRAY.each do |authors_hash|
       author = Author.find_or_create_by!(name: authors_hash[:name])
       puts "updating #{author.name}"
@@ -11,6 +13,35 @@ namespace :seeding_db do
         birth: authors_hash[:birth],
         death: authors_hash[:death]
       )
+    end
+  end
+end
+
+desc "Load unity quotes into db"
+namespace :seeding_db do
+  task :seed_unity_quotes => [ :environment ] do
+    unity = Concept.find_or_create_by(name: 'unity')
+    UNITY_QUOTES.each_with_index do |quote_object, i|
+      quote = Quote.find_or_create_by!(text: quote_object[:text])
+      puts quote_object[:text][0...30] + '...'
+      puts "saving #{i} of #{UNITY_QUOTES.length}"
+      quote.update_attributes(
+        author: Author.find_by!(quote_object[:name])
+      )
+      if quote_object[:writing]
+        w = Writing.find_or_create_by!(title: quote_object[:writing])
+        quote.update_attributes(writing: w)
+      end
+      if quote_object[:attribution]
+        quote.update_attributes(attribution: quote_object[:attribution])
+      end
+      if quote_object[:other_concepts]
+        quote_object[:other_concepts].each do |concept_string|
+          concept = Concept.find_or_create_by!(name: concept_string)
+          concept.quotes << quote
+        end
+      end
+      unity.quotes << quote
     end
   end
 end

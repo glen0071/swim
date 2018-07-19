@@ -7,7 +7,7 @@ class Concept < ActiveRecord::Base
   validates_uniqueness_of :name
 
   def downsize_name
-    self.name.downcase!
+    self.name.downcase! unless self.name.include? 'God'
   end
 
   def self.search(_term)
