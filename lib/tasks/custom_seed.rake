@@ -25,8 +25,14 @@ namespace :seeding_db do
       quote = Quote.find_or_create_by!(text: quote_object[:text])
       puts quote_object[:text][0...30] + '...'
       puts "saving #{i} of #{UNITY_QUOTES.length}"
+      author = ''
+      Author.all.each_with_index do |auth|
+        if quote_object[:author] == auth.name
+          author = auth
+        end
+      end
       quote.update_attributes(
-        author: Author.find_by!(quote_object[:name])
+        author: author
       )
       if quote_object[:writing]
         w = Writing.find_or_create_by!(title: quote_object[:writing])
