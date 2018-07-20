@@ -8,5 +8,6 @@ h1 Quotes
         | By: &nbsp;
         = link_to quote.author.name, author_path(quote.author)
       .d-flex.justify-content-end
+      - if quote.writing
         | Source: &nbsp;
         = link_to quote.writing.title, writing_path(quote.writing)

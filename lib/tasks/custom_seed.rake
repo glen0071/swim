@@ -51,13 +51,3 @@ namespace :populate_db do
     end
   end
 end
-
-desc 'remove duplicate concept associations'
-namespace :clean_db do
-  task :remove_dup_quote_concepts => [ :environment ] do
-    Quote.all.each do |q|
-      q.concepts = q.concepts.distinct
-      q.save
-    end
-  end
-end
