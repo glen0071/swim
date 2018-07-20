@@ -6,6 +6,8 @@ class Concept < ActiveRecord::Base
   validates_presence_of :name
   validates_uniqueness_of :name
 
+  belongs_to :user
+
   def add_quote(new_quote)
     duplicate = quotes.any? {|related_quote| related_quote === new_quote }
     self.quotes << new_quote unless duplicate

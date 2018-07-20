@@ -4,6 +4,8 @@ class Quote < ActiveRecord::Base
   belongs_to :author
   belongs_to :writing
 
+  belongs_to :user
+
   validates :text, length: { minimum: 5, too_short: 'Quote cannot be less than 5 characters long' }
 
   def add_concept(new_concept)

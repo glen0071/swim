@@ -1,6 +1,6 @@
 <h3>Edit Concept</h3>
 
-<%= form_for :concept, url: concept_path(concept) do |f| %>
+<%= form_for @concept, url: concept_path(@concept) do |f| %>
   <%# render "shared/errors", object: :concept %>
   <%= f.label :name, class: "" %>
   <%= f.text_field :name, class: "form-control" %>

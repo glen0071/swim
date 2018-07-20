@@ -207,3 +207,14 @@ HOUSE_LETTERS = [
     alt_title: 'Five Year Plan: 2016-2021'
   }
 ].freeze
+
+OTHER_OR_UNKNOWN = [
+  {
+    title: 'Unknown',
+    alt_title: 'Unknown'
+  },
+  {
+    title: 'Other',
+    alt_title: 'Other'
+  }
+].freeze

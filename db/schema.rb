@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180707104551) do
+ActiveRecord::Schema.define(version: 20180720201723) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -30,6 +30,8 @@ ActiveRecord::Schema.define(version: 20180707104551) do
     t.string   "summary"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer  "user_id"
+    t.index ["user_id"], name: "index_concepts_on_user_id", using: :btree
   end
 
   create_table "quotes", force: :cascade do |t|
@@ -39,7 +41,9 @@ ActiveRecord::Schema.define(version: 20180707104551) do
     t.text     "attribution"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
+    t.integer  "user_id"
     t.index ["author_id"], name: "index_quotes_on_author_id", using: :btree
+    t.index ["user_id"], name: "index_quotes_on_user_id", using: :btree
     t.index ["writing_id"], name: "index_quotes_on_writing_id", using: :btree
   end
 
@@ -48,6 +52,8 @@ ActiveRecord::Schema.define(version: 20180707104551) do
     t.integer  "concept_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer  "user_id"
+    t.index ["user_id"], name: "index_references_on_user_id", using: :btree
   end
 
   create_table "users", force: :cascade do |t|
@@ -72,10 +78,16 @@ ActiveRecord::Schema.define(version: 20180707104551) do
     t.string  "alt_title"
     t.string  "publications"
     t.integer "author_id"
+    t.integer "user_id"
     t.index ["author_id"], name: "index_writings_on_author_id", using: :btree
+    t.index ["user_id"], name: "index_writings_on_user_id", using: :btree
   end
 
+  add_foreign_key "concepts", "users"
   add_foreign_key "quotes", "authors"
+  add_foreign_key "quotes", "users"
   add_foreign_key "quotes", "writings"
+  add_foreign_key "references", "users"
   add_foreign_key "writings", "authors"
+  add_foreign_key "writings", "users"
 end

@@ -6,6 +6,8 @@ class Writing < ActiveRecord::Base
 
   belongs_to :author
 
+  belongs_to :user
+
   def title_with_alt_title
     alt_title.blank? ? title : "#{title}   (#{alt_title})"
   end

@@ -56,7 +56,7 @@ desc 'remove duplicate concept associations'
 namespace :clean_db do
   task :remove_dup_quote_concepts => [ :environment ] do
     Quote.all.each do |q|
-      q.concepts = q.concepts.uniq
+      q.concepts = q.concepts.distinct
       q.save
     end
   end

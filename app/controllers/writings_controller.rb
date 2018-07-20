@@ -15,6 +15,7 @@ class WritingsController < ApplicationController
 
   def create
     @writing = Writing.new(writing_params)
+    @writing.user = current_user
 
     if @writing.save
       redirect_to @writing

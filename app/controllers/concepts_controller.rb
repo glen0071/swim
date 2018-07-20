@@ -11,12 +11,22 @@ class ConceptsController < ApplicationController
   end
 
   def edit
-    @concept = Concept.new
+    @concept = Concept.find(params[:id])
+  end
+
+  def update
+    @concept = Concept.find(params[:id])
+    if @concept.update(concept_params)
+      @concept.update_attributes(user: current_user)
+      redirect_to @concept, notice: 'Concept was successfully updated.'
+    else
+      render :edit
+    end
   end
 
   def create
     @concept = Concept.new(concept_params)
-
+    @concept.user = current_user
     if @concept.save
       redirect_to @concept
     else

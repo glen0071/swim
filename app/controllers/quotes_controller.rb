@@ -21,6 +21,7 @@ class QuotesController < ApplicationController
 
   def update
     if @quote.update(quote_params)
+      @quote.update_attributes(user: current_user)
       redirect_to @quote, notice: 'Widget was successfully updated.'
     else
       render :edit
@@ -29,7 +30,7 @@ class QuotesController < ApplicationController
 
   def create
     @quote = Quote.new(quote_params)
-
+    @quote.user = current_user
     if @quote.save
       redirect_to @quote
     else

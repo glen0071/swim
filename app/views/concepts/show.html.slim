@@ -1,4 +1,7 @@
-h2 Quotations on #{@concept.name.capitalize}
+h2.concept-heading
+    = @concept.name.capitalize
+- if current_user
+  = link_to 'edit concept', edit_concept_path(@concept), class: 'edit-concept-btn'
 - @quotes.each do |quote|
   .concept-show-quote
     p
@@ -6,16 +9,16 @@ h2 Quotations on #{@concept.name.capitalize}
     span.author-name
       = link_to quote.author.name, author_path(quote.author)
     - array = []
-    - quote.concepts.uniq.each do |c|
+    - quote.concepts.distinct.each do |c|
       - array << link_to( c.name, concept_path(c)) unless c === @concept
     - if array.length > 0
       p Other concepts: #{array.join(',').html_safe}
 br
+
+  br
 br
 = button_tag 'Add a Quote', id: 'add-quote-to-concept', class: 'btn btn-primary'
 br
 br
-|  <div id="add-quote-to-concept-form-div" class="hide-form" data-concept-shown="
-= @concept.name
-| ">
+<div id="add-quote-to-concept-form-div" class="hide-form" data-concept-shown="#{@concept.name}">
 = render partial: 'quotes/form', locals: {quote: @quote}
