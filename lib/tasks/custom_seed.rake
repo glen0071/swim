@@ -2,7 +2,7 @@ require_relative '../../db/authors'
 require_relative '../../db/unity_quotes'
 
 desc "Load authors into db"
-namespace :seeding_db do
+namespace :populate_db do
   task :seed_authors => [ :environment ] do
     AUTHORS_ARRAY.each do |authors_hash|
       author = Author.find_or_create_by!(name: authors_hash[:name])
@@ -18,7 +18,7 @@ namespace :seeding_db do
 end
 
 desc "Load unity quotes into db"
-namespace :seeding_db do
+namespace :populate_db do
   task :seed_unity_quotes => [ :environment ] do
     unity = Concept.find_or_create_by(name: 'unity')
     UNITY_QUOTES.each_with_index do |quote_object, i|
@@ -44,10 +44,20 @@ namespace :seeding_db do
       if quote_object[:other_concepts]
         quote_object[:other_concepts].each do |concept_string|
           concept = Concept.find_or_create_by!(name: concept_string)
-          concept.quotes << quote
+          concept.add_quote(quote)
         end
       end
-      unity.quotes << quote
+      unity.add_quote(quote)
+    end
+  end
+end
+
+desc 'remove duplicate concept associations'
+namespace :clean_db do
+  task :remove_dup_quote_concepts => [ :environment ] do
+    Quote.all.each do |q|
+      q.concepts = q.concepts.uniq
+      q.save
     end
   end
 end

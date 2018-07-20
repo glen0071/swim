@@ -5,4 +5,9 @@ class Quote < ActiveRecord::Base
   belongs_to :writing
 
   validates :text, length: { minimum: 5, too_short: 'Quote cannot be less than 5 characters long' }
+
+  def add_concept(new_concept)
+    duplicate = concepts.any? {|related_concept| related_concept === new_concept }
+    self.concepts << new_concept unless duplicate
+  end
 end

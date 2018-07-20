@@ -3,7 +3,6 @@ require_relative 'writings_one'
 require_relative 'authors_one'
 require_relative 'concepts'
 
-
 task :seed_authors => :environment do
 
 end
@@ -34,3 +33,17 @@ HIDDEN_WORDS_STRING_ARRAY.each do |hw_hash|
 end
 
 User.create!(email: 'mail@mail.com', password: 'password') unless user = User.find!(email: 'mail@mail.com')
+
+
+dups = []
+
+Reference.all.each do |r_one|
+  Reference.all.each do |r_two|
+    if r_one.id != r_two.id && r_one.concept_id == r_two.concept_id && r_one.quote_id == r_two.quote_id
+      puts "here are some matches from #{r_one.id} and #{r_two.id}"
+      puts "#{r_one.concept_id} concept to #{r_two.concept_id}"
+      puts "#{r_one.quote_id} quote to #{r_two.quote_id}"
+      r_two.destroy
+    end
+  end
+end

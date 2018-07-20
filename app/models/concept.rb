@@ -6,11 +6,16 @@ class Concept < ActiveRecord::Base
   validates_presence_of :name
   validates_uniqueness_of :name
 
+  def add_quote(new_quote)
+    duplicate = quotes.any? {|related_quote| related_quote === new_quote }
+    self.quotes << new_quote unless duplicate
+  end
+
   def downsize_name
     self.name.downcase! unless self.name.include? 'God'
   end
 
   def self.search(_term)
     where('LOWER(name) LIKE :query OR LOWER(name) LIKE :query', query: "%#{query.downcase}%")
-end
+  end
 end

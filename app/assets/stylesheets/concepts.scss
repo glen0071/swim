@@ -2,13 +2,33 @@
   color: white;
 }
 
-.author-name {
-  display: flex;
-  justify-content: flex-end;
+.author-name a {
   font-style: italic;
   font-weight: bold;
+  color: black;
+
+  &:hover {
+    text-decoration: none;
+  }
 }
 
 .concept-button {
   min-width: 200px;
+}
+
+.quote-text {
+  color: black;
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.concept-show-quote {
+
+  & p {
+    margin: 0;
+  }
+
+  margin: 30px;
 }
