@@ -5,7 +5,9 @@
   <ul class="ul_no_pad">
     <li class="no-bullet">
       <%= link_to writing.title, writing_path(writing), class: "writing-name" %> <span>(<%= writing.alt_title %>)</span>
-      by <%= writing.author.name %>
+      <% if writing.author %>
+        by <%= writing.author.name %>
+      <% end %>
       <br>
       <span>
 
