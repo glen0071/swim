@@ -2,6 +2,25 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+.hide {
+  display: none;
+}
+.hidden-checkbox:checked + .checkbox-label, .selected {
+  background-color: lightgreen;
+  border-color: lightgreen;
+}
+.submit-btn {
+  margin-top: 2em;
+  margin-right: 60%;
+}
+.quote-data {
+  margin: 2em;
+}
+.dropdown-select {
+  margin-top: 2em;
+}
+
+
 .quote-show-link {
   color: black;
   font-style: italic;

@@ -25,6 +25,7 @@ class ConceptsController < ApplicationController
   end
 
   def create
+    binding.pry
     @concept = Concept.new(concept_params)
     @concept.user = current_user
     if @concept.save
