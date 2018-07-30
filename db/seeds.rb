@@ -15,11 +15,23 @@ CONCEPTS.each do |concept|
 end
 
 BAHA_TABLETS_ARRAY.each do |writing_hash|
-  baha.writings << Writing.create!(title: writing_hash[:title], alt_title: writing_hash[:alt_title])
+  baha.writings << Writing.create!(
+    title: writing_hash[:title],
+    alt_title: writing_hash[:alt_title]
+    date: writing_hash[:date]
+    location: writing_hash[:location]
+    notes: writing_hash[:notes]
+  )
 end
 
 BAB_TABLETS_ARRAY.each do |writing_hash|
-  bab.writings << Writing.create!(title: writing_hash[:title], alt_title: writing_hash[:alt_title])
+  bab.writings << Writing.create!(
+    title: writing_hash[:title],
+    alt_title: writing_hash[:alt_title]
+    date: writing_hash[:date]
+    location: writing_hash[:location]
+    notes: writing_hash[:notes]
+  )
 end
 
 hidden_words = Writing.new(title: 'The Hidden Words')

@@ -19,6 +19,12 @@
           <%= concept.name %>
         <% end %>
       </span><br>
+      <% if writing.date %>
+        <div>Date: <%= writing.date %></div>
+      <% end %>
+      <% if writing.location %>
+        <div>Location: <%= writing.location %></div>
+      <% end %>
     </li>
   </ul>
   <% end %>

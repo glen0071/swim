@@ -1,5 +1,6 @@
 require_relative '../../db/authors'
 require_relative '../../db/unity_quotes'
+require_relative '../../db/writings_one'
 
 desc "Load authors into db"
 namespace :populate_db do
@@ -12,6 +13,24 @@ namespace :populate_db do
         end: authors_hash[:end],
         birth: authors_hash[:birth],
         death: authors_hash[:death]
+      )
+    end
+  end
+end
+
+desc "Load writings into db"
+namespace :populate_db do
+  task :seed_writings => [ :environment ] do
+    BAB_TABLETS_ARRAY.each do |writing_hash|
+      author = Author.find_or_create_by!(name: 'The Báb')
+      puts "updating #{author.name}, #{writing_hash[:title]}"
+      writing = Writing.find_or_create_by!(title: writing_hash[:title])
+      writing.update_attributes(
+        alt_title: writing_hash[:title],
+        alt_title: writing_hash[:alt_title],
+        date: writing_hash[:date],
+        location: writing_hash[:location],
+        notes: writing_hash[:notes],
       )
     end
   end
