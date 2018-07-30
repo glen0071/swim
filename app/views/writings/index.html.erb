@@ -5,14 +5,15 @@
   <% author.writings.each do |writing| %>
   <ul class="ul_no_pad">
     <li class="no-bullet">
-      <%= link_to writing.title, writing_path(writing), class: "writing-name" %> <span>(<%= writing.alt_title %>)</span>
-      <% if writing.author %>
-        by <%= writing.author.name %>
+      <%= link_to writing.title, writing_path(writing), class: "writing-name" %>
+      <% unless writing.alt_title.blank? %>
+        <span>(<%= writing.alt_title %>)</span>
       <% end %>
+      <%# if writing.author %>
+        <!-- by <%# writing.author.name %> -->
+      <%# end %>
       <br>
-      <span>
 
-      </span>
       <span class="author-metadata">This writing includes quotations on the following Concepts:
         <% writing.concepts.each do |concept| %>
           <%= concept.name %>
