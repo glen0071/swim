@@ -1,7 +1,8 @@
 <h1>Tablets and Letters</h1>
 
-<% @writings.each do |writing| %>
-
+<% @authors.each do |author|  %>
+  <h4><%= author.name %></h4>
+  <% author.writings.each do |writing| %>
   <ul class="ul_no_pad">
     <li class="no-bullet">
       <%= link_to writing.title, writing_path(writing), class: "writing-name" %> <span>(<%= writing.alt_title %>)</span>
@@ -18,10 +19,8 @@
         <% end %>
       </span><br>
     </li>
-
-
   </ul>
-
+  <% end %>
 <% end %>
 
 <style media="screen">

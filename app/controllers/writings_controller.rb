@@ -3,6 +3,7 @@ class WritingsController < ApplicationController
 
   def index
     @writings = Writing.all.sort { |a, b| a.title <=> b.title }
+    @authors = Author.all
   end
 
   def new
